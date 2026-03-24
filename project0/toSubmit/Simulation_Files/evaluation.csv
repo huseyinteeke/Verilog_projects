@@ -1,0 +1,5 @@
+module_name;testno,test_name;passed;actual_value;expected_value
+Register8bit;1;Q;1;0x00000025;0x00000025
+Register8bit;2;Q;1;0x00000024;0x00000024
+Register8bit;3;Q;1;0x00000025;0x00000025
+Register8bit;4;Q;1;0x00000026;0x00000026

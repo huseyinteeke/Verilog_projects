@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Sat Feb 28 16:46:23 2026
+# Process ID: 26964
+# Current directory: C:/CompOrg/project0/toSubmit/Simulation_Files
+# Command line: wbtcv.exe -mode batch -source C:/CompOrg/project0/toSubmit/Simulation_Files/xsim.dir/reg8sim/webtalk/xsim_webtalk.tcl -notrace
+# Log file: C:/CompOrg/project0/toSubmit/Simulation_Files/webtalk.log
+# Journal file: C:/CompOrg/project0/toSubmit/Simulation_Files\webtalk.jou
+#-----------------------------------------------------------
+source C:/CompOrg/project0/toSubmit/Simulation_Files/xsim.dir/reg8sim/webtalk/xsim_webtalk.tcl -notrace

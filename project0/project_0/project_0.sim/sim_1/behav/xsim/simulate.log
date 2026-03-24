@@ -1,0 +1,12 @@
+Vivado Simulator 2017.4
+Time resolution is 1 ps
+------------------------------------
+Register8bit Simulation Started
+[PASS] Test No: 1, Component: Q, Actual Value: 0x00000025, Expected Value: 0x00000025
+[PASS] Test No: 2, Component: Q, Actual Value: 0x00000024, Expected Value: 0x00000024
+[PASS] Test No: 3, Component: Q, Actual Value: 0x00000025, Expected Value: 0x00000025
+[PASS] Test No: 4, Component: Q, Actual Value: 0x00000026, Expected Value: 0x00000026
+Register8bit Simulation Finished
+0 Test Failed
+4 Test Passed
+------------------------------------

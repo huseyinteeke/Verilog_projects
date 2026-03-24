@@ -1,0 +1,1 @@
+-top "Register8bitSimulation" -snapshot "reg8sim" -debug "typical" 

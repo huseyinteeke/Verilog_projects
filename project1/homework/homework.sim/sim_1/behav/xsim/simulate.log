@@ -1,0 +1,13 @@
+Vivado Simulator 2017.4
+Time resolution is 1 ps
+------------------------------------
+InstructionMemoryUnit Simulation Started
+[PASS] Test No: 1, Component: MEM[h15], Actual Value: 0x0005, Expected Value: 0x0005
+[PASS] Test No: 1, Component: IMUOut, Actual Value: 0x0005, Expected Value: 0x0005
+[PASS] Test No: 1, Component: IROut, Actual Value: 0x2305, Expected Value: 0x2305
+[PASS] Test No: 2, Component: IMUOut, Actual Value: 0x0067, Expected Value: 0x0067
+[PASS] Test No: 2, Component: IROut, Actual Value: 0x0567, Expected Value: 0x0567
+InstructionMemoryUnit Simulation Finished
+0 Test Failed
+5 Test Passed
+------------------------------------

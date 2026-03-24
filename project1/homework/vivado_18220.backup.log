@@ -1,0 +1,508 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Tue Mar 24 11:00:07 2026
+# Process ID: 18220
+# Current directory: C:/CompOrg/project1/homework
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent27820 C:\CompOrg\project1\homework\homework.xpr
+# Log file: C:/CompOrg/project1/homework/vivado.log
+# Journal file: C:/CompOrg/project1/homework\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/CompOrg/project1/homework/homework.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2017.4/data/ip'.
+update_compile_order -fileset sources_1
+set_property top DataMemoryUnit [current_fileset]
+update_compile_order -fileset sources_1
+set_property top DataMemoryUnitSimulation [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+update_compile_order -fileset sim_1
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/CompOrg/project1/homework/homework.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'DataMemoryUnitSimulation' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/CompOrg/project1/homework/homework.sim/sim_1/behav/xsim/RAM.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/CompOrg/project1/homework/homework.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj DataMemoryUnitSimulation_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/CompOrg/project1/ExampleSubmission/DataMemory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DataMemory
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/CompOrg/project1/ExampleSubmission/DataMemoryUnit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DataMemoryUnit
+INFO: [VRFC 10-2458] undeclared symbol DataRegOut, assumed default net type wire [C:/CompOrg/project1/ExampleSubmission/DataMemoryUnit.v:21]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/CompOrg/project1/homework/homework.srcs/sources_1/imports/ExampleSubmission/DataRegister.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DataRegister
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/CompOrg/project1/ExampleSubmission/Helper.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module FileOperation
+INFO: [VRFC 10-311] analyzing module CrystalOscillator
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/CompOrg/project1/ExampleSubmission/DataMemoryUnitSimulation.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DataMemoryUnitSimulation
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/CompOrg/project1/homework/homework.sim/sim_1/behav/xsim'
+Vivado Simulator 2017.4
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2017.4/bin/unwrapped/win64.o/xelab.exe -wto 83f4c7627e214e59bde340155d1e502a --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot DataMemoryUnitSimulation_behav xil_defaultlib.DataMemoryUnitSimulation xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-278] actual bit length 1 differs from formal bit length 16 for port DROut [C:/CompOrg/project1/ExampleSubmission/DataMemoryUnit.v:21]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.CrystalOscillator
+Compiling module xil_defaultlib.DataRegister
+Compiling module xil_defaultlib.DataMemory
+Compiling module xil_defaultlib.DataMemoryUnit
+Compiling module xil_defaultlib.FileOperation
+Compiling module xil_defaultlib.DataMemoryUnitSimulation
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot DataMemoryUnitSimulation_behav
+
+****** Webtalk v2017.4 (64-bit)
+  **** SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+  **** IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+source C:/CompOrg/project1/homework/homework.sim/sim_1/behav/xsim/xsim.dir/DataMemoryUnitSimulation_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Tue Mar 24 11:24:54 2026...
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 840.891 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '5' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/CompOrg/project1/homework/homework.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "DataMemoryUnitSimulation_behav -key {Behavioral:sim_1:Functional:DataMemoryUnitSimulation} -tclbatch {DataMemoryUnitSimulation.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2017.4
+Time resolution is 1 ps
+source DataMemoryUnitSimulation.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+------------------------------------
+DataMemoryUnit Simulation Started
+[PASS] Test No: 1, Component: MEM[h15], Actual Value: 0x0007, Expected Value: 0x0007
+[FAIL] Test No: 1, Component: DMUOut, Actual Value: 0xxxxx, Expected Value: 0x2307
+[FAIL] Test No: 2, Component: DMUOut, Actual Value: 0xxxxx, Expected Value: 0x0767
+DataMemoryUnit Simulation Finished
+2 Test Failed
+1 Test Passed
+------------------------------------
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'DataMemoryUnitSimulation_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:09 . Memory (MB): peak = 845.238 ; gain = 4.348
+synth_design -rtl -name rtl_1
+Command: synth_design -rtl -name rtl_1
+Starting synth_design
+Using part: xc7a15tcpg236-3
+Top: DataMemoryUnit
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 967.309 ; gain = 113.590
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'DataMemoryUnit' [C:/CompOrg/project1/ExampleSubmission/DataMemoryUnit.v:4]
+INFO: [Synth 8-638] synthesizing module 'DataRegister' [C:/CompOrg/project1/homework/homework.srcs/sources_1/imports/ExampleSubmission/DataRegister.v:3]
+INFO: [Synth 8-226] default block is never used [C:/CompOrg/project1/homework/homework.srcs/sources_1/imports/ExampleSubmission/DataRegister.v:17]
+INFO: [Synth 8-256] done synthesizing module 'DataRegister' (1#1) [C:/CompOrg/project1/homework/homework.srcs/sources_1/imports/ExampleSubmission/DataRegister.v:3]
+WARNING: [Synth 8-689] width (1) of port connection 'DROut' does not match port width (16) of module 'DataRegister' [C:/CompOrg/project1/ExampleSubmission/DataMemoryUnit.v:21]
+INFO: [Synth 8-638] synthesizing module 'DataMemory' [C:/CompOrg/project1/ExampleSubmission/DataMemory.v:8]
+INFO: [Synth 8-3876] $readmem data file 'RAM.mem' is read successfully [C:/CompOrg/project1/ExampleSubmission/DataMemory.v:19]
+INFO: [Synth 8-256] done synthesizing module 'DataMemory' (2#1) [C:/CompOrg/project1/ExampleSubmission/DataMemory.v:8]
+WARNING: [Synth 8-3848] Net DMUOut in module/entity DataMemoryUnit does not have driver. [C:/CompOrg/project1/ExampleSubmission/DataMemoryUnit.v:11]
+INFO: [Synth 8-256] done synthesizing module 'DataMemoryUnit' (3#1) [C:/CompOrg/project1/ExampleSubmission/DataMemoryUnit.v:4]
+WARNING: [Synth 8-3331] design DataMemoryUnit has unconnected port DMUOut[15]
+WARNING: [Synth 8-3331] design DataMemoryUnit has unconnected port DMUOut[14]
+WARNING: [Synth 8-3331] design DataMemoryUnit has unconnected port DMUOut[13]
+WARNING: [Synth 8-3331] design DataMemoryUnit has unconnected port DMUOut[12]
+WARNING: [Synth 8-3331] design DataMemoryUnit has unconnected port DMUOut[11]
+WARNING: [Synth 8-3331] design DataMemoryUnit has unconnected port DMUOut[10]
+WARNING: [Synth 8-3331] design DataMemoryUnit has unconnected port DMUOut[9]
+WARNING: [Synth 8-3331] design DataMemoryUnit has unconnected port DMUOut[8]
+WARNING: [Synth 8-3331] design DataMemoryUnit has unconnected port DMUOut[7]
+WARNING: [Synth 8-3331] design DataMemoryUnit has unconnected port DMUOut[6]
+WARNING: [Synth 8-3331] design DataMemoryUnit has unconnected port DMUOut[5]
+WARNING: [Synth 8-3331] design DataMemoryUnit has unconnected port DMUOut[4]
+WARNING: [Synth 8-3331] design DataMemoryUnit has unconnected port DMUOut[3]
+WARNING: [Synth 8-3331] design DataMemoryUnit has unconnected port DMUOut[2]
+WARNING: [Synth 8-3331] design DataMemoryUnit has unconnected port DMUOut[1]
+WARNING: [Synth 8-3331] design DataMemoryUnit has unconnected port DMUOut[0]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1029.434 ; gain = 175.715
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1029.434 ; gain = 175.715
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a15tcpg236-3
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+RTL Elaboration Complete:  : Time (s): cpu = 00:00:12 ; elapsed = 00:00:10 . Memory (MB): peak = 1375.289 ; gain = 521.570
+12 Infos, 18 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:12 ; elapsed = 00:00:10 . Memory (MB): peak = 1375.289 ; gain = 521.570
+refresh_design
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1375.289 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'DataMemoryUnit' [C:/CompOrg/project1/ExampleSubmission/DataMemoryUnit.v:4]
+INFO: [Synth 8-638] synthesizing module 'DataRegister' [C:/CompOrg/project1/homework/homework.srcs/sources_1/imports/ExampleSubmission/DataRegister.v:3]
+INFO: [Synth 8-226] default block is never used [C:/CompOrg/project1/homework/homework.srcs/sources_1/imports/ExampleSubmission/DataRegister.v:17]
+INFO: [Synth 8-256] done synthesizing module 'DataRegister' (1#1) [C:/CompOrg/project1/homework/homework.srcs/sources_1/imports/ExampleSubmission/DataRegister.v:3]
+ERROR: [Synth 8-685] variable 'DMUOut' should not be used in output port connection [C:/CompOrg/project1/ExampleSubmission/DataMemoryUnit.v:21]
+ERROR: [Synth 8-285] failed synthesizing module 'DataMemoryUnit' [C:/CompOrg/project1/ExampleSubmission/DataMemoryUnit.v:4]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1375.289 ; gain = 0.000
+---------------------------------------------------------------------------------
+RTL Elaboration failed
+ERROR: [Common 17-39] 'refresh_design' failed due to earlier errors.
+close_design
+synth_design -rtl -name rtl_1
+Command: synth_design -rtl -name rtl_1
+Starting synth_design
+Using part: xc7a15tcpg236-3
+Top: DataMemoryUnit
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1385.875 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'DataMemoryUnit' [C:/CompOrg/project1/ExampleSubmission/DataMemoryUnit.v:4]
+INFO: [Synth 8-638] synthesizing module 'DataMemory' [C:/CompOrg/project1/ExampleSubmission/DataMemory.v:8]
+INFO: [Synth 8-3876] $readmem data file 'RAM.mem' is read successfully [C:/CompOrg/project1/ExampleSubmission/DataMemory.v:19]
+INFO: [Synth 8-256] done synthesizing module 'DataMemory' (1#1) [C:/CompOrg/project1/ExampleSubmission/DataMemory.v:8]
+INFO: [Synth 8-638] synthesizing module 'DataRegister' [C:/CompOrg/project1/homework/homework.srcs/sources_1/imports/ExampleSubmission/DataRegister.v:3]
+INFO: [Synth 8-226] default block is never used [C:/CompOrg/project1/homework/homework.srcs/sources_1/imports/ExampleSubmission/DataRegister.v:17]
+INFO: [Synth 8-256] done synthesizing module 'DataRegister' (2#1) [C:/CompOrg/project1/homework/homework.srcs/sources_1/imports/ExampleSubmission/DataRegister.v:3]
+ERROR: [Synth 8-685] variable 'DMUOut' should not be used in output port connection [C:/CompOrg/project1/ExampleSubmission/DataMemoryUnit.v:30]
+ERROR: [Synth 8-285] failed synthesizing module 'DataMemoryUnit' [C:/CompOrg/project1/ExampleSubmission/DataMemoryUnit.v:4]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1385.875 ; gain = 0.000
+---------------------------------------------------------------------------------
+RTL Elaboration failed
+7 Infos, 0 Warnings, 0 Critical Warnings and 3 Errors encountered.
+synth_design failed
+ERROR: [Vivado_Tcl 4-5] Elaboration failed - please see the console for details
+synth_design -rtl -name rtl_1
+Command: synth_design -rtl -name rtl_1
+Starting synth_design
+Using part: xc7a15tcpg236-3
+Top: DataMemoryUnit
+ERROR: [Synth 8-2576] procedural assignment to a non-register MemOut is not permitted [C:/CompOrg/project1/ExampleSubmission/DataMemory.v:22]
+INFO: [Synth 8-2350] module DataMemory ignored due to previous errors [C:/CompOrg/project1/ExampleSubmission/DataMemory.v:8]
+Failed to read verilog 'C:/CompOrg/project1/ExampleSubmission/DataMemory.v'
+1 Infos, 0 Warnings, 0 Critical Warnings and 2 Errors encountered.
+synth_design failed
+ERROR: [Vivado_Tcl 4-5] Elaboration failed - please see the console for details
+add_bp {C:/CompOrg/project1/ExampleSubmission/DataMemory.v} 22
+remove_bps -file {C:/CompOrg/project1/ExampleSubmission/DataMemory.v} -line 22
+synth_design -rtl -name rtl_1
+Command: synth_design -rtl -name rtl_1
+Starting synth_design
+Using part: xc7a15tcpg236-3
+Top: DataMemoryUnit
+ERROR: [Synth 8-2715] syntax error near = [C:/CompOrg/project1/ExampleSubmission/DataMemoryUnit.v:34]
+ERROR: [Synth 8-993] DMUOut is an unknown type [C:/CompOrg/project1/ExampleSubmission/DataMemoryUnit.v:34]
+INFO: [Synth 8-2350] module DataMemoryUnit ignored due to previous errors [C:/CompOrg/project1/ExampleSubmission/DataMemoryUnit.v:4]
+Failed to read verilog 'C:/CompOrg/project1/ExampleSubmission/DataMemoryUnit.v'
+1 Infos, 0 Warnings, 0 Critical Warnings and 3 Errors encountered.
+synth_design failed
+ERROR: [Vivado_Tcl 4-5] Elaboration failed - please see the console for details
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/CompOrg/project1/homework/homework.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'DataMemoryUnitSimulation' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/CompOrg/project1/homework/homework.sim/sim_1/behav/xsim/RAM.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/CompOrg/project1/homework/homework.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj DataMemoryUnitSimulation_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/CompOrg/project1/ExampleSubmission/DataMemory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DataMemory
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/CompOrg/project1/ExampleSubmission/DataMemoryUnit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DataMemoryUnit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/CompOrg/project1/homework/homework.srcs/sources_1/imports/ExampleSubmission/DataRegister.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DataRegister
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/CompOrg/project1/ExampleSubmission/Helper.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module FileOperation
+INFO: [VRFC 10-311] analyzing module CrystalOscillator
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/CompOrg/project1/ExampleSubmission/DataMemoryUnitSimulation.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DataMemoryUnitSimulation
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/CompOrg/project1/homework/homework.sim/sim_1/behav/xsim'
+Vivado Simulator 2017.4
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2017.4/bin/unwrapped/win64.o/xelab.exe -wto 83f4c7627e214e59bde340155d1e502a --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot DataMemoryUnitSimulation_behav xil_defaultlib.DataMemoryUnitSimulation xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-278] actual bit length 8 differs from formal bit length 16 for port DROut [C:/CompOrg/project1/ExampleSubmission/DataMemoryUnit.v:31]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.CrystalOscillator
+Compiling module xil_defaultlib.DataMemory
+Compiling module xil_defaultlib.DataRegister
+Compiling module xil_defaultlib.DataMemoryUnit
+Compiling module xil_defaultlib.FileOperation
+Compiling module xil_defaultlib.DataMemoryUnitSimulation
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot DataMemoryUnitSimulation_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/CompOrg/project1/homework/homework.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "DataMemoryUnitSimulation_behav -key {Behavioral:sim_1:Functional:DataMemoryUnitSimulation} -tclbatch {DataMemoryUnitSimulation.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2017.4
+Time resolution is 1 ps
+source DataMemoryUnitSimulation.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+------------------------------------
+DataMemoryUnit Simulation Started
+[PASS] Test No: 1, Component: MEM[h15], Actual Value: 0x0007, Expected Value: 0x0007
+[FAIL] Test No: 1, Component: DMUOut, Actual Value: 0x0067, Expected Value: 0x2307
+[FAIL] Test No: 2, Component: DMUOut, Actual Value: 0x0067, Expected Value: 0x0767
+DataMemoryUnit Simulation Finished
+2 Test Failed
+1 Test Passed
+------------------------------------
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'DataMemoryUnitSimulation_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+synth_design -rtl -name rtl_1
+Command: synth_design -rtl -name rtl_1
+Starting synth_design
+Using part: xc7a15tcpg236-3
+Top: DataMemoryUnit
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1385.875 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'DataMemoryUnit' [C:/CompOrg/project1/ExampleSubmission/DataMemoryUnit.v:4]
+INFO: [Synth 8-638] synthesizing module 'DataMemory' [C:/CompOrg/project1/ExampleSubmission/DataMemory.v:8]
+INFO: [Synth 8-3876] $readmem data file 'RAM.mem' is read successfully [C:/CompOrg/project1/ExampleSubmission/DataMemory.v:19]
+INFO: [Synth 8-256] done synthesizing module 'DataMemory' (1#1) [C:/CompOrg/project1/ExampleSubmission/DataMemory.v:8]
+INFO: [Synth 8-638] synthesizing module 'DataRegister' [C:/CompOrg/project1/homework/homework.srcs/sources_1/imports/ExampleSubmission/DataRegister.v:3]
+INFO: [Synth 8-226] default block is never used [C:/CompOrg/project1/homework/homework.srcs/sources_1/imports/ExampleSubmission/DataRegister.v:17]
+INFO: [Synth 8-256] done synthesizing module 'DataRegister' (2#1) [C:/CompOrg/project1/homework/homework.srcs/sources_1/imports/ExampleSubmission/DataRegister.v:3]
+INFO: [Synth 8-256] done synthesizing module 'DataMemoryUnit' (3#1) [C:/CompOrg/project1/ExampleSubmission/DataMemoryUnit.v:4]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1385.875 ; gain = 0.000
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1385.875 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+RTL Elaboration Complete:  : Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 1391.203 ; gain = 5.328
+11 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+close_design
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/CompOrg/project1/homework/homework.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'DataMemoryUnitSimulation' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/CompOrg/project1/homework/homework.sim/sim_1/behav/xsim/RAM.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/CompOrg/project1/homework/homework.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj DataMemoryUnitSimulation_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/CompOrg/project1/ExampleSubmission/DataMemory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DataMemory
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/CompOrg/project1/ExampleSubmission/DataMemoryUnit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DataMemoryUnit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/CompOrg/project1/homework/homework.srcs/sources_1/imports/ExampleSubmission/DataRegister.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DataRegister
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/CompOrg/project1/ExampleSubmission/Helper.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module FileOperation
+INFO: [VRFC 10-311] analyzing module CrystalOscillator
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/CompOrg/project1/ExampleSubmission/DataMemoryUnitSimulation.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DataMemoryUnitSimulation
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/CompOrg/project1/homework/homework.sim/sim_1/behav/xsim'
+Vivado Simulator 2017.4
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2017.4/bin/unwrapped/win64.o/xelab.exe -wto 83f4c7627e214e59bde340155d1e502a --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot DataMemoryUnitSimulation_behav xil_defaultlib.DataMemoryUnitSimulation xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.CrystalOscillator
+Compiling module xil_defaultlib.DataMemory
+Compiling module xil_defaultlib.DataRegister
+Compiling module xil_defaultlib.DataMemoryUnit
+Compiling module xil_defaultlib.FileOperation
+Compiling module xil_defaultlib.DataMemoryUnitSimulation
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot DataMemoryUnitSimulation_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/CompOrg/project1/homework/homework.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "DataMemoryUnitSimulation_behav -key {Behavioral:sim_1:Functional:DataMemoryUnitSimulation} -tclbatch {DataMemoryUnitSimulation.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2017.4
+Time resolution is 1 ps
+source DataMemoryUnitSimulation.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+------------------------------------
+DataMemoryUnit Simulation Started
+[PASS] Test No: 1, Component: MEM[h15], Actual Value: 0x0007, Expected Value: 0x0007
+[PASS] Test No: 1, Component: DMUOut, Actual Value: 0x2307, Expected Value: 0x2307
+[PASS] Test No: 2, Component: DMUOut, Actual Value: 0x0767, Expected Value: 0x0767
+DataMemoryUnit Simulation Finished
+0 Test Failed
+3 Test Passed
+------------------------------------
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'DataMemoryUnitSimulation_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/CompOrg/project1/homework/homework.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'DataMemoryUnitSimulation' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/CompOrg/project1/homework/homework.sim/sim_1/behav/xsim/RAM.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/CompOrg/project1/homework/homework.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj DataMemoryUnitSimulation_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/CompOrg/project1/ExampleSubmission/DataMemory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DataMemory
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/CompOrg/project1/ExampleSubmission/DataMemoryUnit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DataMemoryUnit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/CompOrg/project1/homework/homework.srcs/sources_1/imports/ExampleSubmission/DataRegister.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DataRegister
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/CompOrg/project1/ExampleSubmission/Helper.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module FileOperation
+INFO: [VRFC 10-311] analyzing module CrystalOscillator
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/CompOrg/project1/ExampleSubmission/DataMemoryUnitSimulation.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DataMemoryUnitSimulation
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/CompOrg/project1/homework/homework.sim/sim_1/behav/xsim'
+Vivado Simulator 2017.4
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2017.4/bin/unwrapped/win64.o/xelab.exe -wto 83f4c7627e214e59bde340155d1e502a --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot DataMemoryUnitSimulation_behav xil_defaultlib.DataMemoryUnitSimulation xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.CrystalOscillator
+Compiling module xil_defaultlib.DataMemory
+Compiling module xil_defaultlib.DataRegister
+Compiling module xil_defaultlib.DataMemoryUnit
+Compiling module xil_defaultlib.FileOperation
+Compiling module xil_defaultlib.DataMemoryUnitSimulation
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot DataMemoryUnitSimulation_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/CompOrg/project1/homework/homework.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "DataMemoryUnitSimulation_behav -key {Behavioral:sim_1:Functional:DataMemoryUnitSimulation} -tclbatch {DataMemoryUnitSimulation.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2017.4
+Time resolution is 1 ps
+source DataMemoryUnitSimulation.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+------------------------------------
+DataMemoryUnit Simulation Started
+[PASS] Test No: 1, Component: MEM[h15], Actual Value: 0x0007, Expected Value: 0x0007
+[FAIL] Test No: 1, Component: DMUOut, Actual Value: 0x23zz, Expected Value: 0x2307
+[FAIL] Test No: 2, Component: DMUOut, Actual Value: 0xzz67, Expected Value: 0x0767
+DataMemoryUnit Simulation Finished
+2 Test Failed
+1 Test Passed
+------------------------------------
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'DataMemoryUnitSimulation_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+run all
+run all
+run all
+run all
+run all
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting Vivado at Tue Mar 24 12:55:23 2026...

@@ -1,0 +1,23 @@
+0.6
+2017.4
+Dec 15 2017
+21:07:18
+C:/CompOrg/project1/ExampleSubmission/AddressRegisterFile.v,1774101981,verilog,,C:/CompOrg/project1/ExampleSubmission/Helper.v,,AddressRegisterFile,,,,,,,,
+C:/CompOrg/project1/ExampleSubmission/AddressRegisterFileSimulation.v,1773683318,verilog,,,,AddressRegisterFileSimulation,,,,,,,,
+C:/CompOrg/project1/ExampleSubmission/DataMemory.v,1774356241,verilog,,C:/CompOrg/project1/ExampleSubmission/DataMemoryUnit.v,,DataMemory,,,,,,,,
+C:/CompOrg/project1/ExampleSubmission/DataMemoryUnit.v,1774354212,verilog,,C:/CompOrg/project1/homework/homework.srcs/sources_1/imports/ExampleSubmission/DataRegister.v,,DataMemoryUnit,,,,,,,,
+C:/CompOrg/project1/ExampleSubmission/DataMemoryUnitSimulation.v,1773683318,verilog,,,,DataMemoryUnitSimulation,,,,,,,,
+C:/CompOrg/project1/ExampleSubmission/Helper.v,1773683318,verilog,,C:/CompOrg/project1/homework/homework.srcs/sources_1/imports/ExampleSubmission/InstructionMemory.v,,CrystalOscillator;FileOperation,,,,,,,,
+C:/CompOrg/project1/ExampleSubmission/Register16bit.v,1773702556,verilog,,C:/CompOrg/project1/ExampleSubmission/AddressRegisterFileSimulation.v,,Register16bit,,,,,,,,
+C:/CompOrg/project1/ExampleSubmission/Register16bitSimulation.v,1773683318,verilog,,,,Register16bitSimulation,,,,,,,,
+C:/CompOrg/project1/ExampleSubmission/RegisterFile.v,1773702840,verilog,,C:/CompOrg/project1/ExampleSubmission/RegisterFileSimulation.v,,RegisterFile,,,,,,,,
+C:/CompOrg/project1/ExampleSubmission/RegisterFileSimulation.v,1773683318,verilog,,,,RegisterFileSimulation,,,,,,,,
+C:/CompOrg/project1/homework/homework.sim/sim_1/behav/xsim/glbl.v,1513215259,verilog,,,,glbl,,,,,,,,
+C:/CompOrg/project1/homework/homework.srcs/sim_1/imports/ExampleSubmission/DataRegisterSimulation.v,1773683318,verilog,,,,DataRegisterSimulation,,,,,,,,
+,,,,,,InstructionMemoryUnitSimulation,,,,,,,,
+C:/CompOrg/project1/homework/homework.srcs/sim_1/imports/ExampleSubmission/InstructionRegisterSimulation.v,1773683318,verilog,,,,InstructionRegisterSimulation,,,,,,,,
+C:/CompOrg/project1/homework/homework.srcs/sim_1/new/DataMemorySim.v,1774353859,verilog,,,,DataMemory_TB,,,,,,,,
+C:/CompOrg/project1/homework/homework.srcs/sources_1/imports/ExampleSubmission/DataRegister.v,1774344512,verilog,,C:/CompOrg/project1/ExampleSubmission/Helper.v,,DataRegister,,,,,,,,
+C:/CompOrg/project1/homework/homework.srcs/sources_1/imports/ExampleSubmission/InstructionMemory.v,1774358025,verilog,,C:/CompOrg/project1/homework/homework.srcs/sources_1/imports/ExampleSubmission/InstructionMemoryUnit.v,,InstructionMemory,,,,,,,,
+C:/CompOrg/project1/homework/homework.srcs/sources_1/imports/ExampleSubmission/InstructionMemoryUnit.v,1774371440,verilog,,C:/CompOrg/project1/homework/homework.srcs/sources_1/imports/ExampleSubmission/InstructionRegister.v,,InstructionMemoryUnit,,,,,,,,
+C:/CompOrg/project1/homework/homework.srcs/sources_1/imports/ExampleSubmission/InstructionRegister.v,1774352812,verilog,,C:/CompOrg/project1/homework/homework.srcs/sim_1/imports/ExampleSubmission/InstructionMemoryUnitSimulation.v,,InstructionRegister,,,,,,,,

@@ -1,0 +1,55 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Tue Mar 24 11:00:07 2026
+# Process ID: 18220
+# Current directory: C:/CompOrg/project1/homework
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent27820 C:\CompOrg\project1\homework\homework.xpr
+# Log file: C:/CompOrg/project1/homework/vivado.log
+# Journal file: C:/CompOrg/project1/homework\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/CompOrg/project1/homework/homework.xpr
+update_compile_order -fileset sources_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top DataMemoryUnit [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sources_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top DataMemoryUnitSimulation [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
+launch_simulation
+source DataMemoryUnitSimulation.tcl
+synth_design -rtl -name rtl_1
+refresh_design
+close_design
+synth_design -rtl -name rtl_1
+synth_design -rtl -name rtl_1
+add_bp {C:/CompOrg/project1/ExampleSubmission/DataMemory.v} 22
+remove_bps -file {C:/CompOrg/project1/ExampleSubmission/DataMemory.v} -line 22
+synth_design -rtl -name rtl_1
+close_sim
+launch_simulation
+source DataMemoryUnitSimulation.tcl
+close_sim
+synth_design -rtl -name rtl_1
+close_design
+launch_simulation
+source DataMemoryUnitSimulation.tcl
+close_sim
+launch_simulation
+source DataMemoryUnitSimulation.tcl
+run all
+run all
+run all
+run all
+run all
+restart
+close_sim
