@@ -1,10 +1,10 @@
 # compile verilog/system verilog design source files
 verilog xil_defaultlib  \
-"../../../../../ExampleSubmission/DataMemory.v" \
-"../../../../../ExampleSubmission/DataMemoryUnit.v" \
+"../../../../homework.srcs/sources_1/imports/ExampleSubmission/DataMemory.v" \
+"../../../../homework.srcs/sources_1/imports/ExampleSubmission/DataMemoryUnit.v" \
 "../../../../homework.srcs/sources_1/imports/ExampleSubmission/DataRegister.v" \
-"../../../../../ExampleSubmission/Helper.v" \
-"../../../../../ExampleSubmission/DataMemoryUnitSimulation.v" \
+"../../../../homework.srcs/sources_1/imports/ExampleSubmission/Helper.v" \
+"../../../../homework.srcs/sim_1/imports/ExampleSubmission/DataMemoryUnitSimulation.v" \
 
 # compile glbl module
 verilog xil_defaultlib "glbl.v"

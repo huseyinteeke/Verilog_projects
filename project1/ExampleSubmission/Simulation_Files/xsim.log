@@ -2,43 +2,58 @@
 # xsim v2017.4 (64-bit)
 # SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
 # IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
-# Start of session at: Tue Mar 24 22:12:54 2026
-# Process ID: 10728
+# Start of session at: Thu Mar 26 15:18:15 2026
+# Process ID: 8748
 # Current directory: C:/CompOrg/project1/ExampleSubmission/Simulation_Files
-# Command line: xsim.exe -mode tcl -source {xsim.dir/alusim/xsim_script.tcl}
+# Command line: xsim.exe -mode tcl -source {xsim.dir/alusyssim/xsim_script.tcl}
 # Log file: C:/CompOrg/project1/ExampleSubmission/Simulation_Files/xsim.log
 # Journal file: C:/CompOrg/project1/ExampleSubmission/Simulation_Files\xsim.jou
 #-----------------------------------------------------------
-source xsim.dir/alusim/xsim_script.tcl
-# xsim {alusim} -autoloadwcfg -runall
+source xsim.dir/alusyssim/xsim_script.tcl
+# xsim {alusyssim} -autoloadwcfg -runall
 Vivado Simulator 2017.4
 Time resolution is 1 ps
 run -all
 ------------------------------------
-ArithmeticLogicUnit Simulation Started
-[PASS] Test No: 1, Component: ALUOut, Actual Value: 0x5555, Expected Value: 0x5555
-[FAIL] Test No: 1, Component: Z, Actual Value: 0x0000, Expected Value: 0x0001
-[FAIL] Test No: 1, Component: C, Actual Value: 0x0000, Expected Value: 0x0001
-[FAIL] Test No: 1, Component: N, Actual Value: 0x0000, Expected Value: 0x0001
-[FAIL] Test No: 1, Component: O, Actual Value: 0x0000, Expected Value: 0x0001
-[PASS] Test No: 2, Component: ALUOut, Actual Value: 0x5555, Expected Value: 0x5555
+ArithmeticLogicUnitSystem Simulation Started
+[PASS] Test No: 1, Component: OutA, Actual Value: 0x7777, Expected Value: 0x7777
+[PASS] Test No: 1, Component: OutB, Actual Value: 0x8887, Expected Value: 0x8887
+[PASS] Test No: 1, Component: ALUOut, Actual Value: 0xfffe, Expected Value: 0xfffe
+[PASS] Test No: 1, Component: Z, Actual Value: 0x0000, Expected Value: 0x0000
+[PASS] Test No: 1, Component: C, Actual Value: 0x0000, Expected Value: 0x0000
+[PASS] Test No: 1, Component: N, Actual Value: 0x0000, Expected Value: 0x0000
+[PASS] Test No: 1, Component: O, Actual Value: 0x0000, Expected Value: 0x0000
+[PASS] Test No: 1, Component: MuxAOut, Actual Value: 0xfffe, Expected Value: 0xfffe
+[PASS] Test No: 1, Component: MuxBOut, Actual Value: 0xfffe, Expected Value: 0xfffe
+[PASS] Test No: 1, Component: MuxCOut, Actual Value: 0x00fe, Expected Value: 0x00fe
+[PASS] Test No: 1, Component: R2, Actual Value: 0x0000, Expected Value: 0x0000
+[PASS] Test No: 1, Component: S3, Actual Value: 0x0000, Expected Value: 0x0000
+[PASS] Test No: 2, Component: OutA, Actual Value: 0x7777, Expected Value: 0x7777
+[PASS] Test No: 2, Component: OutB, Actual Value: 0x8887, Expected Value: 0x8887
+[PASS] Test No: 2, Component: ALUOut, Actual Value: 0xfffe, Expected Value: 0xfffe
 [PASS] Test No: 2, Component: Z, Actual Value: 0x0000, Expected Value: 0x0000
 [PASS] Test No: 2, Component: C, Actual Value: 0x0000, Expected Value: 0x0000
-[PASS] Test No: 2, Component: N, Actual Value: 0x0000, Expected Value: 0x0000
+[PASS] Test No: 2, Component: N, Actual Value: 0x0001, Expected Value: 0x0001
 [PASS] Test No: 2, Component: O, Actual Value: 0x0000, Expected Value: 0x0000
-[FAIL] Test No: 3, Component: ALUOut, Actual Value: 0xffff, Expected Value: 0x0000
-[FAIL] Test No: 3, Component: Z, Actual Value: 0x0000, Expected Value: 0x0001
-[FAIL] Test No: 3, Component: C, Actual Value: 0x0000, Expected Value: 0x0001
-[FAIL] Test No: 3, Component: N, Actual Value: 0x0001, Expected Value: 0x0000
-[PASS] Test No: 3, Component: O, Actual Value: 0x0000, Expected Value: 0x0000
-[PASS] Test No: 4, Component: ALUOut, Actual Value: 0x2233, Expected Value: 0x2233
-[PASS] Test No: 4, Component: Z, Actual Value: 0x0000, Expected Value: 0x0000
-[FAIL] Test No: 4, Component: C, Actual Value: 0x0000, Expected Value: 0x0001
-[PASS] Test No: 4, Component: N, Actual Value: 0x0000, Expected Value: 0x0000
-[FAIL] Test No: 4, Component: O, Actual Value: 0x0000, Expected Value: 0x0001
-ArithmeticLogicUnit Simulation Finished
-10 Test Failed
-10 Test Passed
+[PASS] Test No: 2, Component: MuxAOut, Actual Value: 0xfffe, Expected Value: 0xfffe
+[PASS] Test No: 2, Component: MuxBOut, Actual Value: 0xfffe, Expected Value: 0xfffe
+[PASS] Test No: 2, Component: MuxCOut, Actual Value: 0x00fe, Expected Value: 0x00fe
+[PASS] Test No: 2, Component: R2, Actual Value: 0xfffe, Expected Value: 0xfffe
+[PASS] Test No: 2, Component: S3, Actual Value: 0xfffe, Expected Value: 0xfffe
+[PASS] Test No: 2, Component: PC, Actual Value: 0xfffe, Expected Value: 0xfffe
+[PASS] Test No: 3, Component: OutC, Actual Value: 0x1254, Expected Value: 0x1254
+[PASS] Test No: 3, Component: OutD, Actual Value: 0x1254, Expected Value: 0x1254
+[PASS] Test No: 3, Component: OutE, Actual Value: 0x0023, Expected Value: 0x0023
+[PASS] Test No: 3, Component: Memout, Actual Value: 0x0015, Expected Value: 0x0015
+[PASS] Test No: 3, Component: IROut, Actual Value: 0x0000, Expected Value: 0x0000
+[PASS] Test No: 4, Component: OutC, Actual Value: 0x1254, Expected Value: 0x1254
+[PASS] Test No: 4, Component: OutD, Actual Value: 0x1254, Expected Value: 0x1254
+[PASS] Test No: 4, Component: OutE, Actual Value: 0x0023, Expected Value: 0x0023
+[PASS] Test No: 4, Component: Memout, Actual Value: 0x0015, Expected Value: 0x0015
+[PASS] Test No: 4, Component: IROut, Actual Value: 0x0015, Expected Value: 0x0015
+ArithmeticLogicUnitSystem Simulation Finished
+0 Test Failed
+35 Test Passed
 ------------------------------------
 exit
-INFO: [Common 17-206] Exiting xsim at Tue Mar 24 22:12:58 2026...
+INFO: [Common 17-206] Exiting xsim at Thu Mar 26 15:18:17 2026...

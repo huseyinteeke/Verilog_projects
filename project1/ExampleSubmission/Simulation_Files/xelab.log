@@ -1,14 +1,27 @@
 Vivado Simulator 2017.4
 Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2017.4/bin/unwrapped/win64.o/xelab.exe -top ArithmeticLogicUnitSimulation -snapshot alusim -debug typical 
+Running: C:/Xilinx/Vivado/2017.4/bin/unwrapped/win64.o/xelab.exe -top ArithmeticLogicUnitSystemSimulation -snapshot alusyssim -debug typical 
 Multi-threading is on. Using 18 slave threads.
 Starting static elaboration
+WARNING: [VRFC 10-1770] port IROut remains unconnected for this instance [C:/CompOrg/project1/ExampleSubmission/ArithmeticLogicUnitSystemSimulation.v:28]
 Completed static elaboration
 Starting simulation data flow analysis
 Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
 Compiling module work.CrystalOscillator
+Compiling module work.Register16bit
+Compiling module work.AddressRegisterFile
+Compiling module work.DataMemory
+Compiling module work.DataRegister
+Compiling module work.DataMemoryUnit
+Compiling module work.InstructionRegister
+Compiling module work.InstructionMemory
+Compiling module work.InstructionMemoryUnit
+Compiling module work.RegisterFile
 Compiling module work.ArithmeticLogicUnit
+Compiling module work.MUX4to1
+Compiling module work.MUX2to1
+Compiling module work.ArithmeticLogicUnitSystem
 Compiling module work.FileOperation
-Compiling module work.ArithmeticLogicUnitSimulation
-Built simulation snapshot alusim
+Compiling module work.ArithmeticLogicUnitSystemSimulat...
+Built simulation snapshot alusyssim

@@ -1,6 +1,6 @@
 Vivado Simulator 2017.4
 Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2017.4/bin/unwrapped/win64.o/xelab.exe -wto 83f4c7627e214e59bde340155d1e502a --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot InstructionMemoryUnitSimulation_behav xil_defaultlib.InstructionMemoryUnitSimulation xil_defaultlib.glbl -log elaborate.log 
+Running: C:/Xilinx/Vivado/2017.4/bin/unwrapped/win64.o/xelab.exe -wto 83f4c7627e214e59bde340155d1e502a --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot ArithmeticLogicUnitSystemSimulation_behav xil_defaultlib.ArithmeticLogicUnitSystemSimulation xil_defaultlib.glbl -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
 Completed static elaboration
@@ -8,10 +8,20 @@ Starting simulation data flow analysis
 Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
 Compiling module xil_defaultlib.CrystalOscillator
+Compiling module xil_defaultlib.Register16bit
+Compiling module xil_defaultlib.AddressRegisterFile
+Compiling module xil_defaultlib.DataMemory
+Compiling module xil_defaultlib.DataRegister
+Compiling module xil_defaultlib.DataMemoryUnit
 Compiling module xil_defaultlib.InstructionRegister
 Compiling module xil_defaultlib.InstructionMemory
 Compiling module xil_defaultlib.InstructionMemoryUnit
+Compiling module xil_defaultlib.RegisterFile
+Compiling module xil_defaultlib.ArithmeticLogicUnit
+Compiling module xil_defaultlib.MUX4to1
+Compiling module xil_defaultlib.MUX2to1
+Compiling module xil_defaultlib.ArithmeticLogicUnitSystem
 Compiling module xil_defaultlib.FileOperation
-Compiling module xil_defaultlib.InstructionMemoryUnitSimulation
+Compiling module xil_defaultlib.ArithmeticLogicUnitSystemSimulat...
 Compiling module xil_defaultlib.glbl
-Built simulation snapshot InstructionMemoryUnitSimulation_behav
+Built simulation snapshot ArithmeticLogicUnitSystemSimulation_behav

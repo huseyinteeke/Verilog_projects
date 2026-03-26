@@ -1,13 +1,43 @@
 Vivado Simulator 2017.4
 Time resolution is 1 ps
 ------------------------------------
-InstructionMemoryUnit Simulation Started
-[PASS] Test No: 1, Component: MEM[h15], Actual Value: 0x0005, Expected Value: 0x0005
-[PASS] Test No: 1, Component: IMUOut, Actual Value: 0x0005, Expected Value: 0x0005
-[PASS] Test No: 1, Component: IROut, Actual Value: 0x2305, Expected Value: 0x2305
-[PASS] Test No: 2, Component: IMUOut, Actual Value: 0x0067, Expected Value: 0x0067
-[PASS] Test No: 2, Component: IROut, Actual Value: 0x0567, Expected Value: 0x0567
-InstructionMemoryUnit Simulation Finished
+ArithmeticLogicUnitSystem Simulation Started
+[PASS] Test No: 1, Component: OutA, Actual Value: 0x7777, Expected Value: 0x7777
+[PASS] Test No: 1, Component: OutB, Actual Value: 0x8887, Expected Value: 0x8887
+[PASS] Test No: 1, Component: ALUOut, Actual Value: 0xfffe, Expected Value: 0xfffe
+[PASS] Test No: 1, Component: Z, Actual Value: 0x0000, Expected Value: 0x0000
+[PASS] Test No: 1, Component: C, Actual Value: 0x0000, Expected Value: 0x0000
+[PASS] Test No: 1, Component: N, Actual Value: 0x0000, Expected Value: 0x0000
+[PASS] Test No: 1, Component: O, Actual Value: 0x0000, Expected Value: 0x0000
+[PASS] Test No: 1, Component: MuxAOut, Actual Value: 0xfffe, Expected Value: 0xfffe
+[PASS] Test No: 1, Component: MuxBOut, Actual Value: 0xfffe, Expected Value: 0xfffe
+[PASS] Test No: 1, Component: MuxCOut, Actual Value: 0x00fe, Expected Value: 0x00fe
+[PASS] Test No: 1, Component: R2, Actual Value: 0x0000, Expected Value: 0x0000
+[PASS] Test No: 1, Component: S3, Actual Value: 0x0000, Expected Value: 0x0000
+[PASS] Test No: 2, Component: OutA, Actual Value: 0x7777, Expected Value: 0x7777
+[PASS] Test No: 2, Component: OutB, Actual Value: 0x8887, Expected Value: 0x8887
+[PASS] Test No: 2, Component: ALUOut, Actual Value: 0xfffe, Expected Value: 0xfffe
+[PASS] Test No: 2, Component: Z, Actual Value: 0x0000, Expected Value: 0x0000
+[PASS] Test No: 2, Component: C, Actual Value: 0x0000, Expected Value: 0x0000
+[PASS] Test No: 2, Component: N, Actual Value: 0x0001, Expected Value: 0x0001
+[PASS] Test No: 2, Component: O, Actual Value: 0x0000, Expected Value: 0x0000
+[PASS] Test No: 2, Component: MuxAOut, Actual Value: 0xfffe, Expected Value: 0xfffe
+[PASS] Test No: 2, Component: MuxBOut, Actual Value: 0xfffe, Expected Value: 0xfffe
+[PASS] Test No: 2, Component: MuxCOut, Actual Value: 0x00fe, Expected Value: 0x00fe
+[PASS] Test No: 2, Component: R2, Actual Value: 0xfffe, Expected Value: 0xfffe
+[PASS] Test No: 2, Component: S3, Actual Value: 0xfffe, Expected Value: 0xfffe
+[PASS] Test No: 2, Component: PC, Actual Value: 0xfffe, Expected Value: 0xfffe
+[PASS] Test No: 3, Component: OutC, Actual Value: 0x1254, Expected Value: 0x1254
+[PASS] Test No: 3, Component: OutD, Actual Value: 0x1254, Expected Value: 0x1254
+[PASS] Test No: 3, Component: OutE, Actual Value: 0x0023, Expected Value: 0x0023
+[PASS] Test No: 3, Component: Memout, Actual Value: 0x0015, Expected Value: 0x0015
+[PASS] Test No: 3, Component: IROut, Actual Value: 0x0000, Expected Value: 0x0000
+[PASS] Test No: 4, Component: OutC, Actual Value: 0x1254, Expected Value: 0x1254
+[PASS] Test No: 4, Component: OutD, Actual Value: 0x1254, Expected Value: 0x1254
+[PASS] Test No: 4, Component: OutE, Actual Value: 0x0023, Expected Value: 0x0023
+[PASS] Test No: 4, Component: Memout, Actual Value: 0x0015, Expected Value: 0x0015
+[PASS] Test No: 4, Component: IROut, Actual Value: 0x0015, Expected Value: 0x0015
+ArithmeticLogicUnitSystem Simulation Finished
 0 Test Failed
-5 Test Passed
+35 Test Passed
 ------------------------------------

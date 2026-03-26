@@ -1,6 +1,6 @@
 # compile verilog/system verilog design source files
 verilog xil_defaultlib  \
-"../../../../../ExampleSubmission/Helper.v" \
+"../../../../homework.srcs/sources_1/imports/ExampleSubmission/Helper.v" \
 "../../../../homework.srcs/sources_1/imports/ExampleSubmission/InstructionMemory.v" \
 "../../../../homework.srcs/sources_1/imports/ExampleSubmission/InstructionMemoryUnit.v" \
 "../../../../homework.srcs/sources_1/imports/ExampleSubmission/InstructionRegister.v" \

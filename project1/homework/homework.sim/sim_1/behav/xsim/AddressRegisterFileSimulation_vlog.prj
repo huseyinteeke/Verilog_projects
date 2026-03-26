@@ -1,9 +1,9 @@
 # compile verilog/system verilog design source files
 verilog xil_defaultlib  \
-"../../../../../ExampleSubmission/AddressRegisterFile.v" \
-"../../../../../ExampleSubmission/Helper.v" \
-"../../../../../ExampleSubmission/Register16bit.v" \
-"../../../../../ExampleSubmission/AddressRegisterFileSimulation.v" \
+"../../../../homework.srcs/sources_1/imports/ExampleSubmission/AddressRegisterFile.v" \
+"../../../../homework.srcs/sources_1/imports/ExampleSubmission/Helper.v" \
+"../../../../homework.srcs/sources_1/imports/ExampleSubmission/Register16bit.v" \
+"../../../../homework.srcs/sim_1/imports/ExampleSubmission/AddressRegisterFileSimulation.v" \
 
 # compile glbl module
 verilog xil_defaultlib "glbl.v"
