@@ -2,8 +2,8 @@
 # xsim v2017.4 (64-bit)
 # SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
 # IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
-# Start of session at: Thu Mar 26 15:17:46 2026
-# Process ID: 19148
+# Start of session at: Thu Mar 26 22:07:09 2026
+# Process ID: 9068
 # Current directory: C:/CompOrg/project1/ExampleSubmission/Simulation_Files
 # Command line: xsim.exe -mode tcl -source {xsim.dir/imusim/xsim_script.tcl}
 # Log file: C:/CompOrg/project1/ExampleSubmission/Simulation_Files/xsim.log
@@ -26,4 +26,4 @@ InstructionMemoryUnit Simulation Finished
 5 Test Passed
 ------------------------------------
 exit
-INFO: [Common 17-206] Exiting xsim at Thu Mar 26 15:17:49 2026...
+INFO: [Common 17-206] Exiting xsim at Thu Mar 26 22:07:11 2026...

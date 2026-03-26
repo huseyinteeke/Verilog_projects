@@ -2,26 +2,25 @@
 # xsim v2017.4 (64-bit)
 # SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
 # IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
-# Start of session at: Thu Mar 26 15:18:00 2026
-# Process ID: 4352
+# Start of session at: Thu Mar 26 22:07:03 2026
+# Process ID: 28224
 # Current directory: C:/CompOrg/project1/ExampleSubmission/Simulation_Files
-# Command line: xsim.exe -mode tcl -source {xsim.dir/dmusim/xsim_script.tcl}
+# Command line: xsim.exe -mode tcl -source {xsim.dir/insregsim/xsim_script.tcl}
 # Log file: C:/CompOrg/project1/ExampleSubmission/Simulation_Files/xsim.log
 # Journal file: C:/CompOrg/project1/ExampleSubmission/Simulation_Files\xsim.jou
 #-----------------------------------------------------------
-source xsim.dir/dmusim/xsim_script.tcl
-# xsim {dmusim} -autoloadwcfg -runall
+source xsim.dir/insregsim/xsim_script.tcl
+# xsim {insregsim} -autoloadwcfg -runall
 Vivado Simulator 2017.4
 Time resolution is 1 ps
 run -all
 ------------------------------------
-DataMemoryUnit Simulation Started
-[PASS] Test No: 1, Component: MEM[h15], Actual Value: 0x0007, Expected Value: 0x0007
-[PASS] Test No: 1, Component: DMUOut, Actual Value: 0x2307, Expected Value: 0x2307
-[PASS] Test No: 2, Component: DMUOut, Actual Value: 0x0767, Expected Value: 0x0767
-DataMemoryUnit Simulation Finished
+InstructionRegister Simulation Started
+[PASS] Test No: 1, Component: IROut, Actual Value: 0x2315, Expected Value: 0x2315
+[PASS] Test No: 2, Component: IROut, Actual Value: 0x1567, Expected Value: 0x1567
+InstructionRegister Simulation Finished
 0 Test Failed
-3 Test Passed
+2 Test Passed
 ------------------------------------
 exit
-INFO: [Common 17-206] Exiting xsim at Thu Mar 26 15:18:04 2026...
+INFO: [Common 17-206] Exiting xsim at Thu Mar 26 22:07:06 2026...

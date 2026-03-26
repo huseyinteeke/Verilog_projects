@@ -31,30 +31,16 @@ module Register16bit(
    
     always@(posedge Clock)
     begin
-    
     if(E)
     begin
         case(FunSel)
-        
-        2'b00:begin
-            Q <= 16'd0;
-        end
-        2'b01:begin
-            Q <= I;
-        end
-        2'b10:begin
-            Q <= Q + 1; 
-        end
-        2'b11:begin
-            Q <= Q - 1;
-        end
-        default:begin
-            Q = 16'd0;
-        end
+        2'b00:begin Q <= 16'd0; end
+        2'b01:begin Q <= I; end
+        2'b10:begin Q <= Q + 1; end
+        2'b11:begin Q <= Q - 1; end
+        default:begin Q = 16'd0; end
         endcase
     end
-    else
-    begin 
-    end
+    else begin end
     end
 endmodule
