@@ -1,0 +1,20 @@
+------------------------------------
+CPUSystem Simulation Started
+[PASS] Test No: 1, Component: R2, Actual Value: 0x7777, Expected Value: 0x7777
+[PASS] Test No: 1, Component: R2, Actual Value: 0x0000, Expected Value: 0x0000
+[PASS] Test No: 2, Component: PC, Actual Value: 0x0011, Expected Value: 0x0011
+[PASS] Test No: 3, Component: R1, Actual Value: 0x0000, Expected Value: 0x0000
+[PASS] Test No: 3, Component: R2, Actual Value: 0x0001, Expected Value: 0x0001
+[PASS] Test No: 3, Component: Z, Actual Value: 0x0001, Expected Value: 0x0001
+[PASS] Test No: 4, Component: OutA, Actual Value: 0x0004, Expected Value: 0x0004
+[PASS] Test No: 4, Component: ALUOut, Actual Value: 0x0008, Expected Value: 0x0008
+[PASS] Test No: 4, Component: R2, Actual Value: 0x0004, Expected Value: 0x0004
+[PASS] Test No: 5, Component: PC, Actual Value: 0x364f, Expected Value: 0x364f
+[PASS] Test No: 6, Component: R4, Actual Value: 0xf210, Expected Value: 0xf210
+[PASS] Test No: 6, Component: AR, Actual Value: 0xf210, Expected Value: 0xf210
+[PASS] Test No: 7, Component: R1, Actual Value: 0x0001, Expected Value: 0x0001
+CPUSystem Simulation Finished
+------------------------------------
+
+
+
