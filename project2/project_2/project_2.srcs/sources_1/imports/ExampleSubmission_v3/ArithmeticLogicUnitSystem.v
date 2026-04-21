@@ -58,11 +58,10 @@ module ArithmeticLogicUnitSystem(
     input wire DMU_WR,
     input wire DMU_FunSel,
     output wire [15:0] IROut,
+    output wire Z,
     output wire C,
     output wire N,
-    output wire O,
-    output wire Z
-
+    output wire O
 );
 
 

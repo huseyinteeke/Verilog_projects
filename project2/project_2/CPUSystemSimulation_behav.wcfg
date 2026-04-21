@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="CPUSystemSimulation_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="CPUSystemSimulation" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="3385815630fs"></ZoomEndTime>
+      <Cursor1Time time="3495000000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="116"></NameColumnWidth>
+      <ValueColumnWidth column_width="58"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="29" />
+   <wvobject fp_name="/CPUSystemSimulation/T" type="array">
+      <obj_property name="ElementShortName">T[11:0]</obj_property>
+      <obj_property name="ObjectShortName">T[11:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CPUSystemSimulation/test_no" type="array">
+      <obj_property name="ElementShortName">test_no[31:0]</obj_property>
+      <obj_property name="ObjectShortName">test_no[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CPUSystemSimulation/clock_count" type="array">
+      <obj_property name="ElementShortName">clock_count[31:0]</obj_property>
+      <obj_property name="ObjectShortName">clock_count[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CPUSystemSimulation/clock" type="logic">
+      <obj_property name="ElementShortName">clock</obj_property>
+      <obj_property name="ObjectShortName">clock</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CPUSystemSimulation/reset" type="logic">
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CPUSystemSimulation/CPUSys/ALUSys/ARF_OutDSel" type="logic">
+      <obj_property name="ElementShortName">ARF_OutDSel</obj_property>
+      <obj_property name="ObjectShortName">ARF_OutDSel</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CPUSystemSimulation/CPUSys/ALUSys/ARF_RegSel" type="array">
+      <obj_property name="ElementShortName">ARF_RegSel[2:0]</obj_property>
+      <obj_property name="ObjectShortName">ARF_RegSel[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CPUSystemSimulation/CPUSys/ALUSys/ARF_FunSel" type="array">
+      <obj_property name="ElementShortName">ARF_FunSel[1:0]</obj_property>
+      <obj_property name="ObjectShortName">ARF_FunSel[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CPUSystemSimulation/CPUSys/ALUSys/IMU_LH" type="logic">
+      <obj_property name="ElementShortName">IMU_LH</obj_property>
+      <obj_property name="ObjectShortName">IMU_LH</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CPUSystemSimulation/CPUSys/ALUSys/IMU_CS" type="logic">
+      <obj_property name="ElementShortName">IMU_CS</obj_property>
+      <obj_property name="ObjectShortName">IMU_CS</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CPUSystemSimulation/CPUSys/ALUSys/DMU_CS" type="logic">
+      <obj_property name="ElementShortName">DMU_CS</obj_property>
+      <obj_property name="ObjectShortName">DMU_CS</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CPUSystemSimulation/CPUSys/ALUSys/DMU_WR" type="logic">
+      <obj_property name="ElementShortName">DMU_WR</obj_property>
+      <obj_property name="ObjectShortName">DMU_WR</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CPUSystemSimulation/CPUSys/ALUSys/DMU_FunSel" type="logic">
+      <obj_property name="ElementShortName">DMU_FunSel</obj_property>
+      <obj_property name="ObjectShortName">DMU_FunSel</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CPUSystemSimulation/CPUSys/ALUSys/IROut" type="array">
+      <obj_property name="ElementShortName">IROut[15:0]</obj_property>
+      <obj_property name="ObjectShortName">IROut[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CPUSystemSimulation/CPUSys/ALUSys/Z" type="logic">
+      <obj_property name="ElementShortName">Z</obj_property>
+      <obj_property name="ObjectShortName">Z</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CPUSystemSimulation/CPUSys/ALUSys/C" type="logic">
+      <obj_property name="ElementShortName">C</obj_property>
+      <obj_property name="ObjectShortName">C</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CPUSystemSimulation/CPUSys/ALUSys/N" type="logic">
+      <obj_property name="ElementShortName">N</obj_property>
+      <obj_property name="ObjectShortName">N</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CPUSystemSimulation/CPUSys/ALUSys/O" type="logic">
+      <obj_property name="ElementShortName">O</obj_property>
+      <obj_property name="ObjectShortName">O</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CPUSystemSimulation/CPUSys/ALUSys/MuxCOut" type="array">
+      <obj_property name="ElementShortName">MuxCOut[7:0]</obj_property>
+      <obj_property name="ObjectShortName">MuxCOut[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CPUSystemSimulation/CPUSys/ALUSys/MuxAOut" type="array">
+      <obj_property name="ElementShortName">MuxAOut[15:0]</obj_property>
+      <obj_property name="ObjectShortName">MuxAOut[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CPUSystemSimulation/CPUSys/ALUSys/MuxBOut" type="array">
+      <obj_property name="ElementShortName">MuxBOut[15:0]</obj_property>
+      <obj_property name="ObjectShortName">MuxBOut[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CPUSystemSimulation/CPUSys/ALUSys/OutA" type="array">
+      <obj_property name="ElementShortName">OutA[15:0]</obj_property>
+      <obj_property name="ObjectShortName">OutA[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CPUSystemSimulation/CPUSys/ALUSys/OutB" type="array">
+      <obj_property name="ElementShortName">OutB[15:0]</obj_property>
+      <obj_property name="ObjectShortName">OutB[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CPUSystemSimulation/CPUSys/ALUSys/OutC" type="array">
+      <obj_property name="ElementShortName">OutC[15:0]</obj_property>
+      <obj_property name="ObjectShortName">OutC[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CPUSystemSimulation/CPUSys/ALUSys/OutD" type="array">
+      <obj_property name="ElementShortName">OutD[15:0]</obj_property>
+      <obj_property name="ObjectShortName">OutD[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CPUSystemSimulation/CPUSys/ALUSys/OutE" type="array">
+      <obj_property name="ElementShortName">OutE[15:0]</obj_property>
+      <obj_property name="ObjectShortName">OutE[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CPUSystemSimulation/CPUSys/ALUSys/ALUOut" type="array">
+      <obj_property name="ElementShortName">ALUOut[15:0]</obj_property>
+      <obj_property name="ObjectShortName">ALUOut[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CPUSystemSimulation/CPUSys/ALUSys/DMUOut" type="array">
+      <obj_property name="ElementShortName">DMUOut[15:0]</obj_property>
+      <obj_property name="ObjectShortName">DMUOut[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CPUSystemSimulation/CPUSys/ALUSys/IMUOut" type="array">
+      <obj_property name="ElementShortName">IMUOut[15:0]</obj_property>
+      <obj_property name="ObjectShortName">IMUOut[15:0]</obj_property>
+   </wvobject>
+</wave_config>

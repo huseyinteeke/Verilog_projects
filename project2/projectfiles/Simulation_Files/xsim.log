@@ -1,0 +1,74 @@
+#-----------------------------------------------------------
+# xsim v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Tue Apr 21 16:41:49 2026
+# Process ID: 37708
+# Current directory: C:/CompOrg/project2/ExampleSubmission_v3/Simulation_Files
+# Command line: xsim.exe -mode tcl -source {xsim.dir/cpusyssim/xsim_script.tcl}
+# Log file: C:/CompOrg/project2/ExampleSubmission_v3/Simulation_Files/xsim.log
+# Journal file: C:/CompOrg/project2/ExampleSubmission_v3/Simulation_Files\xsim.jou
+#-----------------------------------------------------------
+source xsim.dir/cpusyssim/xsim_script.tcl
+# xsim {cpusyssim} -autoloadwcfg -runall
+Vivado Simulator 2017.4
+Time resolution is 1 ps
+run -all
+------------------------------------
+CPUSystem Simulation Started
+[PASS] Test No: 1, Component: R2, Actual Value: 0x7777, Expected Value: 0x7777
+[PASS] Test No: 1, Component: R2, Actual Value: 0x0000, Expected Value: 0x0000
+[PASS] Test No: 2, Component: PC, Actual Value: 0x0011, Expected Value: 0x0011
+[PASS] Test No: 3, Component: R2, Actual Value: 0x0000, Expected Value: 0x0000
+[PASS] Test No: 4, Component: R2, Actual Value: 0x0004, Expected Value: 0x0004
+[PASS] Test No: 5, Component: PC, Actual Value: 0x364f, Expected Value: 0x364f
+[PASS] Test No: 6, Component: AR, Actual Value: 0xf210, Expected Value: 0xf210
+[PASS] Test No: 7, Component: R1, Actual Value: 0x0001, Expected Value: 0x0001
+[PASS] Test No: 8, Component: R3, Actual Value: 0x0303, Expected Value: 0x0303
+[PASS] Test No: 9, Component: PC, Actual Value: 0x0055, Expected Value: 0x0055
+[PASS] Test No: 10, Component: R4, Actual Value: 0x000b, Expected Value: 0x000b
+[PASS] Test No: 11, Component: R1, Actual Value: 0x5a5a, Expected Value: 0x5a5a
+[PASS] Test No: 12, Component: SP, Actual Value: 0x0100, Expected Value: 0x0100
+[PASS] Test No: 13, Component: R1(CSL), Actual Value: 0x0003, Expected Value: 0x0003
+[PASS] Test No: 14, Component: R2(CSR), Actual Value: 0x8001, Expected Value: 0x8001
+[PASS] Test No: 15, Component: R3(ADC), Actual Value: 0x0016, Expected Value: 0x0016
+[PASS] Test No: 16, Component: R4(ORR), Actual Value: 0xaaaa, Expected Value: 0xaaaa
+[PASS] Test No: 17, Component: R1(NAND), Actual Value: 0xff00, Expected Value: 0xff00
+[PASS] Test No: 18, Component: R3(INC), Actual Value: 0x1001, Expected Value: 0x1001
+[PASS] Test No: 19, Component: R2(INC-Diff), Actual Value: 0x0051, Expected Value: 0x0051
+[PASS] Test No: 20, Component: AR(INC), Actual Value: 0x0556, Expected Value: 0x0556
+[PASS] Test No: 21, Component: R3(LSR), Actual Value: 0x0002, Expected Value: 0x0002
+[PASS] Test No: 22, Component: SP(DEC), Actual Value: 0x00fe, Expected Value: 0x00fe
+[PASS] Test No: 23, Component: R1(ADD-Carry), Actual Value: 0x0000, Expected Value: 0x0000
+[PASS] Test No: 24, Component: PC(BLT), Actual Value: 0x0044, Expected Value: 0x0044
+[PASS] Test No: 25, Component: R1(ASR), Actual Value: 0xc002, Expected Value: 0xc002
+[PASS] Test No: 26, Component: PC(MOV), Actual Value: 0xabcd, Expected Value: 0xabcd
+[PASS] Test No: 27, Component: R4(XOR), Actual Value: 0x0000, Expected Value: 0x0000
+[PASS] Test No: 28, Component: R3(IMM), Actual Value: 0x00cc, Expected Value: 0x00cc
+[PASS] Test No: 29, Component: PC(BNE Taken), Actual Value: 0x0077, Expected Value: 0x0077
+[PASS] Test No: 30, Component: PC(BNE Not), Actual Value: 0x0000, Expected Value: 0x0000
+[PASS] Test No: 31, Component: PC(BEQ Taken), Actual Value: 0x0088, Expected Value: 0x0088
+[PASS] Test No: 32, Component: PC(BEQ Not), Actual Value: 0x0000, Expected Value: 0x0000
+[PASS] Test No: 33, Component: PC(BGT Not), Actual Value: 0x0000, Expected Value: 0x0000
+[PASS] Test No: 34, Component: PC(BLE Taken), Actual Value: 0x00aa, Expected Value: 0x00aa
+[PASS] Test No: 35, Component: PC(BGE Not), Actual Value: 0x0000, Expected Value: 0x0000
+[PASS] Test No: 36, Component: R1(LSL to Zero), Actual Value: 0x0000, Expected Value: 0x0000
+[PASS] Test No: 37, Component: R2(ASR Pos), Actual Value: 0x2000, Expected Value: 0x2000
+[PASS] Test No: 38, Component: R3(SUB Zero), Actual Value: 0x0000, Expected Value: 0x0000
+[PASS] Test No: 39, Component: R4(SUB Neg), Actual Value: 0xfffb, Expected Value: 0xfffb
+[PASS] Test No: 40, Component: R1(ADD Ovf), Actual Value: 0x8000, Expected Value: 0x8000
+[PASS] Test No: 41, Component: R1(INC Max), Actual Value: 0x0000, Expected Value: 0x0000
+[PASS] Test No: 42, Component: R2(DEC Min), Actual Value: 0xffff, Expected Value: 0xffff
+[PASS] Test No: 43, Component: R4(IMM), Actual Value: 0x00dd, Expected Value: 0x00dd
+[PASS] Test No: 44, Component: AR(MOV from SP), Actual Value: 0xaabb, Expected Value: 0xaabb
+[PASS] Test No: 45, Component: SP(MOV from AR), Actual Value: 0xccdd, Expected Value: 0xccdd
+[PASS] Test No: 46, Component: R1(AND Zero), Actual Value: 0x0000, Expected Value: 0x0000
+[PASS] Test No: 48, Component: R1(ORR Max), Actual Value: 0xffff, Expected Value: 0xffff
+[PASS] Test No: 49, Component: R3(XOR Self), Actual Value: 0x0000, Expected Value: 0x0000
+[PASS] Test No: 50, Component: PC(INC Final), Actual Value: 0x1235, Expected Value: 0x1235
+CPUSystem Simulation Finished
+0 Test Failed
+50 Test Passed
+------------------------------------
+exit
+INFO: [Common 17-206] Exiting xsim at Tue Apr 21 16:41:52 2026...

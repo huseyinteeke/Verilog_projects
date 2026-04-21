@@ -1,7 +1,9 @@
+`timescale 1ns / 1ps
+
 module DataMemoryUnit(
     input wire [7:0] I,
     input wire [15:0] Address,
-    input wire CS,       // CU'dan gelen aktif-düþük sinyal
+    input wire CS,       // CU'dan gelen aktif-dÃ¼ÅŸÃ¼k sinyal
     input wire WR,       // Read=0, Write=1
     input wire FunSel,   // 0: LSB, 1: MSB
     input wire Clock,
@@ -10,8 +12,8 @@ module DataMemoryUnit(
 
 wire [7:0] MemOut;
 
-// DR sadece okuma yapýldýðý (CS=0 ve WR=0) anlarda güncellenmelidir.
-// Aksi takdirde veri yolundaki 'Z' deðerini içeri alýr.
+// DR sadece okuma yapÄ±ldÄ±ÄŸÄ± (CS=0 ve WR=0) anlarda gÃ¼ncellenmelidir.
+// Aksi takdirde veri yolundaki 'Z' deÄŸerini iÃ§eri alÄ±r.
 wire ReadActive = (~CS) && (~WR);
 
 DataMemory DM(
@@ -19,13 +21,13 @@ DataMemory DM(
     .Clock(Clock),
     .Data(I),
     .WR(WR),
-    .CS(CS), // Direkt baðladýk, çünkü DataMemory de 0 ile aktif oluyor.
+    .CS(CS), // Direkt baÄŸladÄ±k, Ã§Ã¼nkÃ¼ DataMemory de 0 ile aktif oluyor.
     .MemOut(MemOut)
 );
 
 DataRegister DR(
     .I(MemOut),
-    .E(ReadActive), // E artýk sürekli 1 deðil, sadece okuma varken aktif.
+    .E(ReadActive), // E artÄ±k sÃ¼rekli 1 deÄŸil, sadece okuma varken aktif.
     .FunSel(FunSel),
     .Clock(Clock),
     .DROut(DMUOut)
