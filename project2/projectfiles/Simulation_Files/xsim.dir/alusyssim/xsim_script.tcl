@@ -1,1 +1,0 @@
-xsim {alusyssim} -autoloadwcfg -runall

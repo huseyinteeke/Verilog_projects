@@ -1,1 +1,0 @@
--top "DataMemoryUnitSimulation" -snapshot "dmusim" -debug "typical" 
