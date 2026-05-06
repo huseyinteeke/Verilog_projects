@@ -1,1 +1,0 @@
--top "CPUSystemSimulation" -snapshot "cpusyssim" -debug "typical" 

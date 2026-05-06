@@ -3,6 +3,5 @@ Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
 Running: C:/Xilinx/Vivado/2017.4/bin/unwrapped/win64.o/xelab.exe -top CPUSystemSimulation -snapshot cpusyssim -debug typical 
 Multi-threading is on. Using 18 slave threads.
 Starting static elaboration
-ERROR: [VRFC 10-93] T_Reset is not declared under prefix CPUSys [C:/CompOrg/project2/projectfiles/CPUSystemSimulation.v:99]
-ERROR: [VRFC 10-93] T_Reset is not declared under prefix CPUSys [C:/CompOrg/project2/projectfiles/CPUSystemSimulation.v:105]
+ERROR: [VRFC 10-93] T_Reset is not declared under prefix CPUSys [C:/CompOrg/project2/projectfiles/extrasimulations.v:81]
 ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.

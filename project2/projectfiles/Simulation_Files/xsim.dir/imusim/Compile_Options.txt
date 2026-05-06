@@ -1,1 +1,0 @@
--top "InstructionMemoryUnitSimulation" -snapshot "imusim" -debug "typical" 
