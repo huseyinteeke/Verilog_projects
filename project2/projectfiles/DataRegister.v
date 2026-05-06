@@ -13,14 +13,13 @@ always @(posedge Clock)
 begin
 
 if(E) 
-begin
-    case(FunSel)
-        1'b0: begin DROut[7:0] = I; end
-        1'b1: begin DROut[15:8] = I; end
-        default: begin end
-    endcase
-end
-
+    begin
+        case(FunSel)
+            1'b0: begin DROut[7:0] = I; end
+            1'b1: begin DROut[15:8] = I; end
+            default: begin end
+        endcase
+    end
 else begin end
 end
 

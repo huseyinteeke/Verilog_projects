@@ -7,6 +7,9 @@ copy "RAM.mem" "%folder%/RAM.mem"
 copy "ROM.mem" "%folder%/ROM.mem"
 cd "%folder%
 
+
+
+
 ::CPU System Simulation
 call xvlog ../Register16bit.v  
 call xvlog ../RegisterFile.v

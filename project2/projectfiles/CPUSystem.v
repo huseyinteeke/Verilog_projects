@@ -37,7 +37,6 @@ wire [2:0] DestReg  = IROut[9:7];
 wire [2:0] SrcReg1  = IROut[6:4];
 wire [2:0] SrcReg2  = IROut[3:1];
 
-reg T_Reset;
 
 // RF Muxes
 wire [2:0] OutA_Mapped = {1'b0, SrcReg1[1:0]};
@@ -124,7 +123,7 @@ always @(*) begin
         end
     endcase
 
-    T_Reset     = 1'b0;   ALU_WF      = 1'b0;
+       ALU_WF      = 1'b0;
     ARF_OutCSel = 2'b00;  ARF_OutDSel = 1'b0;
     ARF_FunSel  = 2'b11;  ARF_RegSel  = 3'b111; 
     RF_FunSel   = 2'b11;  RF_RegSel   = 4'b1111; RF_ScrSel   = 4'b1111; 
@@ -137,39 +136,36 @@ always @(*) begin
     end else begin
         case(T)
             12'h0001: begin 
-                ARF_OutCSel = 2'b00; IMU_CS = 1'b1; IMU_LH = 1'b0;
+                IMU_CS = 1'b1; IMU_LH = 1'b0;
             end
             12'h0002: begin 
-                ARF_FunSel = 2'b10; ARF_RegSel = 3'b011; 
+                ARF_FunSel = 2'b10; ARF_RegSel = 3'b010; 
                 IMU_CS = 1'b1; IMU_LH = 1'b1;
             end
             
             12'h0004: begin 
+                IMU_CS = 1'b0;
                 if (Opcode <= 6'd6) begin 
                     IMU_CS = 1'b1; 
                     if (Opcode == 6'd0 || (Opcode == 6'd1 && Z == 0) || (Opcode == 6'd2 && Z == 1) ||
-                       (Opcode == 6'd3 && N != O) || (Opcode == 6'd4 && N == O && Z == 0) ||
-                       (Opcode == 6'd5 && (N != O || Z == 1)) || (Opcode == 6'd6 && N == O)) begin
+                       (Opcode == 6'd3 && N != 0) || (Opcode == 6'd4 && N == 0 && Z == 0) ||
+                       (Opcode == 6'd5 && (N != 0 || Z == 1)) || (Opcode == 6'd6 && N == 0)) begin
                         ARF_FunSel = 2'b01; ARF_RegSel = 3'b011;
                     end
-                    T_Reset = 1'b1;
                 end
                 else if (Opcode == 6'd23) begin 
                     IMU_CS = 1'b1; 
                     RF_FunSel = 2'b01; RF_RegSel = Decoded_IMM_DST;
-                    T_Reset = 1'b1;
                 end
                 else if (Opcode == 6'd7 || Opcode == 6'd8) begin 
-                    if (DestReg != SrcReg1) begin 
-                        if (SrcReg1[2] == 1'b0) begin 
-                            ARF_OutCSel = SrcReg1[1:0];
-                            if (DestReg[2]) begin MuxASel=2'b01; RF_FunSel=2'b01; RF_RegSel=Decoded_DSTREG; end
-                            else begin MuxBSel=2'b01; ARF_FunSel=2'b01; ARF_RegSel=Decoded_ARF_DST; end
-                        end else begin 
-                            RF_OutASel = OutA_Mapped; ALU_FunSel = 4'b0000;
-                            if (DestReg[2]) begin MuxASel=2'b00; RF_FunSel=2'b01; RF_RegSel=Decoded_DSTREG; end
-                            else begin MuxBSel=2'b00; ARF_FunSel=2'b01; ARF_RegSel=Decoded_ARF_DST; end
-                        end
+                    if (SrcReg1[2] == 1'b0) begin 
+                        ARF_OutCSel = SrcReg1[1:0];
+                        if (DestReg[2]) begin MuxASel=2'b01; RF_FunSel=2'b01; RF_RegSel=Decoded_DSTREG; end
+                        else begin MuxBSel=2'b01; ARF_FunSel=2'b01; ARF_RegSel=Decoded_ARF_DST; end
+                    end else begin 
+                        RF_OutASel = OutA_Mapped; ALU_FunSel = 4'b0000;
+                        if (DestReg[2]) begin MuxASel=2'b00; RF_FunSel=2'b01; RF_RegSel=Decoded_DSTREG; end
+                        else begin MuxBSel=2'b00; ARF_FunSel=2'b01; ARF_RegSel=Decoded_ARF_DST; end
                     end
                 end
                 else begin 
@@ -203,14 +199,12 @@ always @(*) begin
                     end else begin
                         MuxBSel=2'b00; ARF_FunSel = 2'b01; ARF_RegSel = Decoded_ARF_DST;
                     end
-                    T_Reset = 1'b1;
                 end
             end
             
             12'h0010: begin 
                 if (Opcode == 6'd7 || Opcode == 6'd8) begin
                     if (DestReg[2]) begin RF_OutASel = {1'b0, DestReg[1:0]}; ALU_WF = 1'b1; end
-                    T_Reset = 1'b1;
                 end
                 else begin 
                     ALU_WF = 1'b1;
@@ -219,7 +213,6 @@ always @(*) begin
                     end else begin
                         MuxBSel=2'b00; ARF_FunSel = 2'b01; ARF_RegSel = Decoded_ARF_DST;
                     end
-                    T_Reset = 1'b1;
                 end
             end
         endcase

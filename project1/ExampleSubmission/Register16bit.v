@@ -25,7 +25,7 @@ module Register16bit(
     input wire[15:0] I , 
     input wire[1:0] FunSel,
     input wire E,
-    output reg[15:0] Q = 16'd0
+    output reg[15:0]
     );
     
    

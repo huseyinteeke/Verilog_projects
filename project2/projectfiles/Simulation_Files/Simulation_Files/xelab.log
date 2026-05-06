@@ -1,0 +1,5 @@
+Vivado Simulator 2017.4
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2017.4/bin/unwrapped/win64.o/xelab.exe -top Register16bitSimulation -snapshot reg16sim -debug typical 
+Multi-threading is on. Using 18 slave threads.
+ERROR: [XSIM 43-3225] Cannot find design unit work.Register16bitSimulation in library work located at xsim.dir/work.

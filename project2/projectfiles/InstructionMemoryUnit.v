@@ -6,7 +6,7 @@ module InstructionMemoryUnit(
     input wire LH,
     input wire CS,
     input wire Clock,
-    output reg [15:0] IMUOut,
+    output wire [15:0] IMUOut,
     output wire [15:0] IROut
 );
 
@@ -28,21 +28,6 @@ InstructionMemory IM(
     .MemOut(MemOut)
 );
 
-always @(*)
-begin
-
-if(CS)
-begin
-
-IMUOut = {8'h00 , IROut[7:0]}; 
-
-end
-else 
-begin
-
-IMUOut = 16'hzzzz;
-
-end
-end
+assign IMUOut = {8'h00 , IROut[7:0]}; 
 
 endmodule
