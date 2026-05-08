@@ -1,0 +1,1 @@
+xsim {cpusyssimfact} -autoloadwcfg -runall

@@ -25,6 +25,8 @@ reg IMU_CS;
 reg DMU_CS;
 reg DMU_WR;
 reg DMU_FunSel;
+reg T_Reset;
+
 
 wire [15:0] IROut;
 wire Z, C, N, O;
@@ -86,6 +88,7 @@ always @(*) begin
     RF_OutASel  = 3'b000; RF_OutBSel  = 3'b000;
     MuxASel     = 2'b00;  MuxBSel     = 2'b00;
     MuxCSel     = 1'b0;   ALU_FunSel  = 4'b0000;
+    T_Reset     = 1'b0;
 
     if (Opcode == 6'd23) begin
         MuxASel = 2'b11; // IMM
@@ -152,10 +155,12 @@ always @(*) begin
                        (Opcode == 6'd5 && (N != 0 || Z == 1)) || (Opcode == 6'd6 && N == 0)) begin
                         ARF_FunSel = 2'b01; ARF_RegSel = 3'b011;
                     end
+                    T_Reset = 1'b1;
                 end
                 else if (Opcode == 6'd23) begin 
                     IMU_CS = 1'b1; 
                     RF_FunSel = 2'b01; RF_RegSel = Decoded_IMM_DST;
+                    T_Reset = 1'b1;
                 end
                 else if (Opcode == 6'd7 || Opcode == 6'd8) begin 
                     if (SrcReg1[2] == 1'b0) begin 
@@ -199,6 +204,7 @@ always @(*) begin
                     end else begin
                         MuxBSel=2'b00; ARF_FunSel = 2'b01; ARF_RegSel = Decoded_ARF_DST;
                     end
+                    T_Reset = 1'b1;
                 end
             end
             
@@ -213,6 +219,7 @@ always @(*) begin
                     end else begin
                         MuxBSel=2'b00; ARF_FunSel = 2'b01; ARF_RegSel = Decoded_ARF_DST;
                     end
+                    T_Reset = 1'b1;
                 end
             end
         endcase
@@ -220,7 +227,7 @@ always @(*) begin
 end
 
 always @(posedge Clock) begin
-    if(!Reset) begin
+    if(!Reset || T_Reset) begin
         T <= 12'h0001;
     end else begin
         case(T)

@@ -22,13 +22,13 @@ DataMemory DM(
     .Clock(Clock),
     .Data(I),
     .WR(WR),
-    .CS(~CS), 
+    .CS(CS), 
     .MemOut(MemOut)
 );
 
 DataRegister DR(
     .I(MemOut),
-    .E(CS), 
+    .E(CS & ~WR), 
     .FunSel(FunSel),
     .Clock(Clock),
     .DROut(DMUOut)
