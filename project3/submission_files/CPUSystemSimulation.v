@@ -215,6 +215,24 @@ module CPUSystemSimulation();
         CPUSys.ALUSys.IMU.IR.IROut = 16'h7400;
         CPUSys.T = 12'b0000_0000_0100;
         while (CPUSys.T != 12'b0000_0000_0001 && clock_count <= 15) begin
+            F.CheckValues({4'b0, CPUSys.T}, {4'b0, CPUSys.T}, test_no, "DBG_T_State");
+            F.CheckValues(CPUSys.ALUSys.ARF.PC.Q, CPUSys.ALUSys.ARF.PC.Q, test_no, "DBG_PC_Val");
+            F.CheckValues(CPUSys.ALUSys.ARF.AR.Q, CPUSys.ALUSys.ARF.AR.Q, test_no, "DBG_AR_Val");
+            
+            // Adres Kablosu: OutD AR'yi (0014) gösteriyor mu?
+            F.CheckValues({15'b0, CPUSys.ARF_OutDSel}, {15'b0, CPUSys.ARF_OutDSel}, test_no, "DBG_OutDSel");
+            
+            // Veri Yolu: PC -> MuxA -> S1 (veya direkt ALU) akışı
+            F.CheckValues({14'b0, CPUSys.ARF_OutCSel}, {14'b0, CPUSys.ARF_OutCSel}, test_no, "DBG_OutCSel");
+            F.CheckValues({15'b0, CPUSys.MuxCSel}, {15'b0, CPUSys.MuxCSel}, test_no, "DBG_MuxCSel");
+            
+            // RAM Kontrol
+            F.CheckValues({15'b0, CPUSys.DMU_CS}, {15'b0, CPUSys.DMU_CS}, test_no, "DBG_RAM_CS");
+            F.CheckValues({15'b0, CPUSys.DMU_WR}, {15'b0, CPUSys.DMU_WR}, test_no, "DBG_RAM_WR");
+            // ------------------------------
+            
+            
+            
             clk.Clock();
             clock_count = clock_count + 1;
         end

@@ -47,6 +47,8 @@ wire [2:0] OutB_Mapped = {1'b0, SrcReg2[1:0]};
 reg [3:0] Decoded_DSTREG;
 reg [2:0] Decoded_ARF_DST;
 reg [3:0] Decoded_IMM_DST;
+reg [4:0] Decoded_SREG1;
+reg [4:0] Decoded_ARF_SREG1;
 
 // DECODER BLOK 
 always @(*) begin
@@ -71,6 +73,24 @@ always @(*) begin
         2'b10: Decoded_IMM_DST = 4'b1101; // R3
         2'b11: Decoded_IMM_DST = 4'b1110; // R4
     endcase
+
+    case(SrcReg1)
+        3'b100: Decoded_SREG1  = 4'b0111; // R1
+        3'b101: Decoded_SREG1 = 4'b1011; // R2
+        3'b110: Decoded_SREG1 = 4'b1101; // R3
+        3'b111: Decoded_SREG1 = 4'b1110; // R4
+        default: Decoded_SREG1 = 4'b1111; 
+    endcase
+    
+    case(SrcReg1)
+        3'b000, 3'b001: Decoded_ARF_SREG1 = 3'b011; // PC
+        3'b010:         Decoded_ARF_SREG1 = 3'b110; // AR
+        3'b011:         Decoded_ARF_SREG1 = 3'b101; // SP
+        default:        Decoded_ARF_SREG1 = 3'b111; 
+    endcase
+
+
+
 end
 
 ArithmeticLogicUnitSystem ALUSys(
@@ -233,6 +253,27 @@ always @(*) begin
                 end
 
 
+                else if(Opcode == 6'd29) //STR
+                begin
+                    ARF_OutDSel = 1'b0; //AR
+                    DMU_CS      = 1'b0;
+                    if(Decoded_SREG1 != 4'b1111) //RF To mem
+                    begin
+                        RF_OutASel = Decoded_SREG1;
+                        ALU_FunSel = 4'b0000;
+                        MuxCSel    = 1'b0; //LSB
+                    end
+                    else //ARF to mem
+                    begin
+
+                        ARF_OutCSel = Decoded_ARF_SREG1;
+                        MuxASel     = 2'b01;
+                        RF_RegSel   = 4'b1111;
+                        RF_ScrSel   = 4'b0111;
+                        RF_FunSel = 2'b01;
+                    end
+                end
+
 
 
                 else begin 
@@ -325,6 +366,29 @@ always @(*) begin
                 end
 
 
+                else if(Opcode == 6'd29) //STR
+                begin
+                    ARF_OutDSel = 1'b0; //AR
+                    DMU_CS      = 1'b1;
+                    DMU_WR      = 1'b1; //W
+                    if(Decoded_SREG1 != 4'b1111) //RF To mem
+                    begin
+                        RF_OutASel = Decoded_SREG1;
+                        ALU_FunSel = 4'b0000;
+                        MuxCSel    = 1'b0; //LSB
+                    end
+                    else //ARF to mem
+                    begin
+
+                        RF_OutASel = 3'b100; //Scratch S1
+                        ALU_FunSel = 4'b000;
+                        MuxCSel    = 1'b0;
+                    end
+                end
+
+
+
+
                 else begin
                     if (Opcode != 6'd22) ALU_WF = 1'b1; 
                     if (DestReg[2] == 1'b1) begin
@@ -414,6 +478,16 @@ always @(*) begin
                 end
 
 
+                else if(Opcode == 6'd29) //STR LSB completed increment AR
+                begin
+                    ARF_OutDSel = 1'b0; //AR
+                    DMU_CS      = 1'b0;
+                    DMU_WR      = 1'b1; //W
+                    ARF_RegSel  = 3'b110;
+                    ARF_FunSel  = 2'b10;  
+                end
+
+
                 else begin 
                     ALU_WF = 1'b1;
                     if (DestReg[2] == 1'b1) begin
@@ -477,7 +551,7 @@ always @(*) begin
                 end
 
 
-                else if(Opcode == 6'd27)
+                else if(Opcode == 6'd27) //RET
                 begin
                 
                     ARF_OutCSel = 1'b1;
@@ -505,6 +579,15 @@ always @(*) begin
                         ARF_FunSel = 2'b01;
                         ARF_RegSel = Decoded_ARF_DST;
                     end
+                end
+
+
+                else if(Opcode == 6'd29) //STR
+                begin
+                    ARF_OutDSel = 1'b0; //AR
+                    DMU_CS      = 1'b1;
+                    DMU_WR      = 1'b1; //W
+                    MuxCSel     = 1'b1; //MSB
                 end
             end
 
@@ -537,6 +620,13 @@ always @(*) begin
 
                     T_Reset = 1'b1;
                 end
+
+
+                else if(Opcode == 6'd29) //STR
+                begin
+                    T_Reset = 1'b1;
+                end
+
             end
 
             12'h0080: begin

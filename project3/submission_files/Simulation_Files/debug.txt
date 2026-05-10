@@ -4032,3 +4032,382 @@ CPUSystemSimulationFactorial Simulation Finished
 
 
 
+------------------------------------
+CPUSystemSimulation Simulation Started
+[PASS] Test No: 1, Component: MEM[SP, FE], Actual Value: 0x0012, Expected Value: 0x0012
+[PASS] Test No: 1, Component: MEM[SP, FF], Actual Value: 0x0023, Expected Value: 0x0023
+[PASS] Test No: 1, Component: SP, Actual Value: 0x00fd, Expected Value: 0x00fd
+[PASS] Test No: 2, Component: MEM[SP,FE], Actual Value: 0x0012, Expected Value: 0x0012
+[PASS] Test No: 2, Component: MEM[SP,FF], Actual Value: 0x0023, Expected Value: 0x0023
+[PASS] Test No: 2, Component: R1, Actual Value: 0x2312, Expected Value: 0x2312
+[PASS] Test No: 2, Component: SP, Actual Value: 0x00ff, Expected Value: 0x00ff
+[PASS] Test No: 3, Component: PC, Actual Value: 0x0036, Expected Value: 0x0036
+[PASS] Test No: 3, Component: MEM[SP,FC], Actual Value: 0x0070, Expected Value: 0x0070
+[PASS] Test No: 3, Component: MEM[SP,FD], Actual Value: 0x0000, Expected Value: 0x0000
+[PASS] Test No: 3, Component: SP, Actual Value: 0x00fb, Expected Value: 0x00fb
+[PASS] Test No: 4, Component: PC, Actual Value: 0x0070, Expected Value: 0x0070
+[PASS] Test No: 4, Component: SP, Actual Value: 0x00fd, Expected Value: 0x00fd
+[PASS] Test No: 5, Component: AR, Actual Value: 0x0007, Expected Value: 0x0007
+[PASS] Test No: 5, Component: R2, Actual Value: 0x0703, Expected Value: 0x0703
+[FAIL] Test No: 6, Component: AR, Actual Value: 0x0014, Expected Value: 0x0015
+[FAIL] Test No: 6, Component: MEM[AR,14], Actual Value: 0x0000, Expected Value: 0x0022
+[FAIL] Test No: 6, Component: MEM[AR,15], Actual Value: 0x0007, Expected Value: 0x0011
+[FAIL] Test No: 7, Component: AR, Actual Value: 0x0000, Expected Value: 0x0021
+[FAIL] Test No: 7, Component: R4, Actual Value: 0x0000, Expected Value: 0x1405
+[FAIL] Test No: 8, Component: AR, Actual Value: 0x0000, Expected Value: 0x00a9
+[FAIL] Test No: 8, Component: MEM[AR,A8], Actual Value: 0x0000, Expected Value: 0x0089
+[FAIL] Test No: 8, Component: MEM[AR,A9], Actual Value: 0x0000, Expected Value: 0x0067
+[FAIL] Test No: 9, Component: AR, Actual Value: 0x0000, Expected Value: 0x0017
+[FAIL] Test No: 9, Component: R2, Actual Value: 0x0000, Expected Value: 0x0703
+[FAIL] Test No: 10, Component: AR, Actual Value: 0x00c0, Expected Value: 0x00c2
+[FAIL] Test No: 10, Component: MEM[AR,C1], Actual Value: 0x0000, Expected Value: 0x0011
+[PASS] Test No: 10, Component: MEM[AR,C2], Actual Value: 0x0000, Expected Value: 0x0000
+CPUSystemSimulation Simulation Finished
+------------------------------------
+
+
+
+------------------------------------
+CPUSystemSimulation Simulation Started
+[PASS] Test No: 1, Component: MEM[SP, FE], Actual Value: 0x0012, Expected Value: 0x0012
+[PASS] Test No: 1, Component: MEM[SP, FF], Actual Value: 0x0023, Expected Value: 0x0023
+[PASS] Test No: 1, Component: SP, Actual Value: 0x00fd, Expected Value: 0x00fd
+[PASS] Test No: 2, Component: MEM[SP,FE], Actual Value: 0x0012, Expected Value: 0x0012
+[PASS] Test No: 2, Component: MEM[SP,FF], Actual Value: 0x0023, Expected Value: 0x0023
+[PASS] Test No: 2, Component: R1, Actual Value: 0x2312, Expected Value: 0x2312
+[PASS] Test No: 2, Component: SP, Actual Value: 0x00ff, Expected Value: 0x00ff
+[PASS] Test No: 3, Component: PC, Actual Value: 0x0036, Expected Value: 0x0036
+[PASS] Test No: 3, Component: MEM[SP,FC], Actual Value: 0x0070, Expected Value: 0x0070
+[PASS] Test No: 3, Component: MEM[SP,FD], Actual Value: 0x0000, Expected Value: 0x0000
+[PASS] Test No: 3, Component: SP, Actual Value: 0x00fb, Expected Value: 0x00fb
+[PASS] Test No: 4, Component: PC, Actual Value: 0x0070, Expected Value: 0x0070
+[PASS] Test No: 4, Component: SP, Actual Value: 0x00fd, Expected Value: 0x00fd
+[PASS] Test No: 5, Component: AR, Actual Value: 0x0007, Expected Value: 0x0007
+[PASS] Test No: 5, Component: R2, Actual Value: 0x0703, Expected Value: 0x0703
+[FAIL] Test No: 6, Component: AR, Actual Value: 0x0014, Expected Value: 0x0015
+[FAIL] Test No: 6, Component: MEM[AR,14], Actual Value: 0x0000, Expected Value: 0x0022
+[FAIL] Test No: 6, Component: MEM[AR,15], Actual Value: 0x0007, Expected Value: 0x0011
+[FAIL] Test No: 7, Component: AR, Actual Value: 0x0000, Expected Value: 0x0021
+[FAIL] Test No: 7, Component: R4, Actual Value: 0x0000, Expected Value: 0x1405
+[FAIL] Test No: 8, Component: AR, Actual Value: 0x0000, Expected Value: 0x00a9
+[FAIL] Test No: 8, Component: MEM[AR,A8], Actual Value: 0x0000, Expected Value: 0x0089
+[FAIL] Test No: 8, Component: MEM[AR,A9], Actual Value: 0x0000, Expected Value: 0x0067
+[FAIL] Test No: 9, Component: AR, Actual Value: 0x0000, Expected Value: 0x0017
+[FAIL] Test No: 9, Component: R2, Actual Value: 0x0000, Expected Value: 0x0703
+[FAIL] Test No: 10, Component: AR, Actual Value: 0x00c0, Expected Value: 0x00c2
+[FAIL] Test No: 10, Component: MEM[AR,C1], Actual Value: 0x0000, Expected Value: 0x0011
+[PASS] Test No: 10, Component: MEM[AR,C2], Actual Value: 0x0000, Expected Value: 0x0000
+CPUSystemSimulation Simulation Finished
+------------------------------------
+
+
+
+------------------------------------
+CPUSystemSimulationFactorial Simulation Started
+[FAIL] Test No: 70, Component: IROut, Actual Value: 0x00ca, Expected Value: 0x00d8
+[PASS] Test No: 70, Component: PC, Actual Value: 0x00d8, Expected Value: 0x00d8
+[PASS] Test No: 70, Component: SP, Actual Value: 0x00ff, Expected Value: 0x00ff
+[FAIL] Test No: 70, Component: AR, Actual Value: 0x0001, Expected Value: 0x0055
+[FAIL] Test No: 70, Component: MEM[ADDRESS], Actual Value: 0x0000, Expected Value: 0x0018
+[PASS] Test No: 70, Component: MEM[ADDRESS], Actual Value: 0x0000, Expected Value: 0x0000
+[PASS] Test No: 70, Component: R1, Actual Value: 0x0001, Expected Value: 0x0001
+[PASS] Test No: 70, Component: R2, Actual Value: 0x0018, Expected Value: 0x0018
+[PASS] Test No: 70, Component: R3, Actual Value: 0x0006, Expected Value: 0x0006
+[PASS] Test No: 70, Component: R4, Actual Value: 0x0000, Expected Value: 0x0000
+[PASS] Test No: 70, Component: MEM[SP], Actual Value: 0x00c6, Expected Value: 0x00c6
+[PASS] Test No: 70, Component: MEM[SP], Actual Value: 0x0000, Expected Value: 0x0000
+[PASS] Test No: 70, Component: MEM[SP], Actual Value: 0x00ca, Expected Value: 0x00ca
+[PASS] Test No: 70, Component: MEM[SP], Actual Value: 0x0000, Expected Value: 0x0000
+[PASS] Test No: 70, Component: MEM[SP], Actual Value: 0x00c6, Expected Value: 0x00c6
+[PASS] Test No: 70, Component: MEM[SP], Actual Value: 0x0000, Expected Value: 0x0000
+[PASS] Test No: 70, Component: MEM[SP], Actual Value: 0x00ca, Expected Value: 0x00ca
+[PASS] Test No: 70, Component: MEM[SP], Actual Value: 0x0000, Expected Value: 0x0000
+[PASS] Test No: 70, Component: MEM[SP], Actual Value: 0x00c6, Expected Value: 0x00c6
+[PASS] Test No: 70, Component: MEM[SP], Actual Value: 0x0000, Expected Value: 0x0000
+[PASS] Test No: 70, Component: MEM[SP], Actual Value: 0x00ca, Expected Value: 0x00ca
+[PASS] Test No: 70, Component: MEM[SP], Actual Value: 0x0000, Expected Value: 0x0000
+[PASS] Test No: 70, Component: MEM[SP], Actual Value: 0x00b4, Expected Value: 0x00b4
+[PASS] Test No: 70, Component: MEM[SP], Actual Value: 0x0000, Expected Value: 0x0000
+CPUSystemSimulationFactorial Simulation Finished
+------------------------------------
+
+
+
+------------------------------------
+CPUSystemSimulation Simulation Started
+[PASS] Test No: 1, Component: MEM[SP, FE], Actual Value: 0x0012, Expected Value: 0x0012
+[PASS] Test No: 1, Component: MEM[SP, FF], Actual Value: 0x0023, Expected Value: 0x0023
+[PASS] Test No: 1, Component: SP, Actual Value: 0x00fd, Expected Value: 0x00fd
+[PASS] Test No: 2, Component: MEM[SP,FE], Actual Value: 0x0012, Expected Value: 0x0012
+[PASS] Test No: 2, Component: MEM[SP,FF], Actual Value: 0x0023, Expected Value: 0x0023
+[PASS] Test No: 2, Component: R1, Actual Value: 0x2312, Expected Value: 0x2312
+[PASS] Test No: 2, Component: SP, Actual Value: 0x00ff, Expected Value: 0x00ff
+[PASS] Test No: 3, Component: PC, Actual Value: 0x0036, Expected Value: 0x0036
+[PASS] Test No: 3, Component: MEM[SP,FC], Actual Value: 0x0070, Expected Value: 0x0070
+[PASS] Test No: 3, Component: MEM[SP,FD], Actual Value: 0x0000, Expected Value: 0x0000
+[PASS] Test No: 3, Component: SP, Actual Value: 0x00fb, Expected Value: 0x00fb
+[PASS] Test No: 4, Component: PC, Actual Value: 0x0070, Expected Value: 0x0070
+[PASS] Test No: 4, Component: SP, Actual Value: 0x00fd, Expected Value: 0x00fd
+[PASS] Test No: 5, Component: AR, Actual Value: 0x0007, Expected Value: 0x0007
+[PASS] Test No: 5, Component: R2, Actual Value: 0x0703, Expected Value: 0x0703
+[PASS] Test No: 6, Component: AR, Actual Value: 0x0015, Expected Value: 0x0015
+[FAIL] Test No: 6, Component: MEM[AR,14], Actual Value: 0x00ff, Expected Value: 0x0022
+[FAIL] Test No: 6, Component: MEM[AR,15], Actual Value: 0x0023, Expected Value: 0x0011
+[FAIL] Test No: 7, Component: AR, Actual Value: 0x0000, Expected Value: 0x0021
+[FAIL] Test No: 7, Component: R4, Actual Value: 0x0000, Expected Value: 0x1405
+[FAIL] Test No: 8, Component: AR, Actual Value: 0x0000, Expected Value: 0x00a9
+[FAIL] Test No: 8, Component: MEM[AR,A8], Actual Value: 0x0000, Expected Value: 0x0089
+[FAIL] Test No: 8, Component: MEM[AR,A9], Actual Value: 0x0000, Expected Value: 0x0067
+[FAIL] Test No: 9, Component: AR, Actual Value: 0x0000, Expected Value: 0x0017
+[FAIL] Test No: 9, Component: R2, Actual Value: 0x0000, Expected Value: 0x0703
+[FAIL] Test No: 10, Component: AR, Actual Value: 0x00c0, Expected Value: 0x00c2
+[FAIL] Test No: 10, Component: MEM[AR,C1], Actual Value: 0x0000, Expected Value: 0x0011
+[PASS] Test No: 10, Component: MEM[AR,C2], Actual Value: 0x0000, Expected Value: 0x0000
+CPUSystemSimulation Simulation Finished
+------------------------------------
+
+
+
+------------------------------------
+CPUSystemSimulationFactorial Simulation Started
+[FAIL] Test No: 70, Component: IROut, Actual Value: 0x00ca, Expected Value: 0x00d8
+[PASS] Test No: 70, Component: PC, Actual Value: 0x00d8, Expected Value: 0x00d8
+[PASS] Test No: 70, Component: SP, Actual Value: 0x00ff, Expected Value: 0x00ff
+[FAIL] Test No: 70, Component: AR, Actual Value: 0x0001, Expected Value: 0x0055
+[FAIL] Test No: 70, Component: MEM[ADDRESS], Actual Value: 0x0000, Expected Value: 0x0018
+[PASS] Test No: 70, Component: MEM[ADDRESS], Actual Value: 0x0000, Expected Value: 0x0000
+[PASS] Test No: 70, Component: R1, Actual Value: 0x0001, Expected Value: 0x0001
+[PASS] Test No: 70, Component: R2, Actual Value: 0x0018, Expected Value: 0x0018
+[PASS] Test No: 70, Component: R3, Actual Value: 0x0006, Expected Value: 0x0006
+[PASS] Test No: 70, Component: R4, Actual Value: 0x0000, Expected Value: 0x0000
+[PASS] Test No: 70, Component: MEM[SP], Actual Value: 0x00c6, Expected Value: 0x00c6
+[PASS] Test No: 70, Component: MEM[SP], Actual Value: 0x0000, Expected Value: 0x0000
+[PASS] Test No: 70, Component: MEM[SP], Actual Value: 0x00ca, Expected Value: 0x00ca
+[PASS] Test No: 70, Component: MEM[SP], Actual Value: 0x0000, Expected Value: 0x0000
+[PASS] Test No: 70, Component: MEM[SP], Actual Value: 0x00c6, Expected Value: 0x00c6
+[PASS] Test No: 70, Component: MEM[SP], Actual Value: 0x0000, Expected Value: 0x0000
+[PASS] Test No: 70, Component: MEM[SP], Actual Value: 0x00ca, Expected Value: 0x00ca
+[PASS] Test No: 70, Component: MEM[SP], Actual Value: 0x0000, Expected Value: 0x0000
+[PASS] Test No: 70, Component: MEM[SP], Actual Value: 0x00c6, Expected Value: 0x00c6
+[PASS] Test No: 70, Component: MEM[SP], Actual Value: 0x0000, Expected Value: 0x0000
+[PASS] Test No: 70, Component: MEM[SP], Actual Value: 0x00ca, Expected Value: 0x00ca
+[PASS] Test No: 70, Component: MEM[SP], Actual Value: 0x0000, Expected Value: 0x0000
+[PASS] Test No: 70, Component: MEM[SP], Actual Value: 0x00b4, Expected Value: 0x00b4
+[PASS] Test No: 70, Component: MEM[SP], Actual Value: 0x0000, Expected Value: 0x0000
+CPUSystemSimulationFactorial Simulation Finished
+------------------------------------
+
+
+
+------------------------------------
+CPUSystemSimulation Simulation Started
+[PASS] Test No: 1, Component: MEM[SP, FE], Actual Value: 0x0012, Expected Value: 0x0012
+[PASS] Test No: 1, Component: MEM[SP, FF], Actual Value: 0x0023, Expected Value: 0x0023
+[PASS] Test No: 1, Component: SP, Actual Value: 0x00fd, Expected Value: 0x00fd
+[PASS] Test No: 2, Component: MEM[SP,FE], Actual Value: 0x0012, Expected Value: 0x0012
+[PASS] Test No: 2, Component: MEM[SP,FF], Actual Value: 0x0023, Expected Value: 0x0023
+[PASS] Test No: 2, Component: R1, Actual Value: 0x2312, Expected Value: 0x2312
+[PASS] Test No: 2, Component: SP, Actual Value: 0x00ff, Expected Value: 0x00ff
+[PASS] Test No: 3, Component: PC, Actual Value: 0x0036, Expected Value: 0x0036
+[PASS] Test No: 3, Component: MEM[SP,FC], Actual Value: 0x0070, Expected Value: 0x0070
+[PASS] Test No: 3, Component: MEM[SP,FD], Actual Value: 0x0000, Expected Value: 0x0000
+[PASS] Test No: 3, Component: SP, Actual Value: 0x00fb, Expected Value: 0x00fb
+[PASS] Test No: 4, Component: PC, Actual Value: 0x0070, Expected Value: 0x0070
+[PASS] Test No: 4, Component: SP, Actual Value: 0x00fd, Expected Value: 0x00fd
+[PASS] Test No: 5, Component: AR, Actual Value: 0x0007, Expected Value: 0x0007
+[PASS] Test No: 5, Component: R2, Actual Value: 0x0703, Expected Value: 0x0703
+[PASS] Test No: 6, Component: DBG_T_State, Actual Value: 0x0004, Expected Value: 0x0004
+[PASS] Test No: 6, Component: DBG_PC_Val, Actual Value: 0x1122, Expected Value: 0x1122
+[PASS] Test No: 6, Component: DBG_AR_Val, Actual Value: 0x0014, Expected Value: 0x0014
+[PASS] Test No: 6, Component: DBG_OutDSel, Actual Value: 0x0000, Expected Value: 0x0000
+[PASS] Test No: 6, Component: DBG_OutCSel, Actual Value: 0x0000, Expected Value: 0x0000
+[PASS] Test No: 6, Component: DBG_MuxCSel, Actual Value: 0x0000, Expected Value: 0x0000
+[PASS] Test No: 6, Component: DBG_RAM_CS, Actual Value: 0x0001, Expected Value: 0x0001
+[PASS] Test No: 6, Component: DBG_RAM_WR, Actual Value: 0x0000, Expected Value: 0x0000
+[PASS] Test No: 6, Component: DBG_T_State, Actual Value: 0x0008, Expected Value: 0x0008
+[PASS] Test No: 6, Component: DBG_PC_Val, Actual Value: 0x1122, Expected Value: 0x1122
+[PASS] Test No: 6, Component: DBG_AR_Val, Actual Value: 0x0014, Expected Value: 0x0014
+[PASS] Test No: 6, Component: DBG_OutDSel, Actual Value: 0x0000, Expected Value: 0x0000
+[PASS] Test No: 6, Component: DBG_OutCSel, Actual Value: 0x0000, Expected Value: 0x0000
+[PASS] Test No: 6, Component: DBG_MuxCSel, Actual Value: 0x0000, Expected Value: 0x0000
+[PASS] Test No: 6, Component: DBG_RAM_CS, Actual Value: 0x0001, Expected Value: 0x0001
+[PASS] Test No: 6, Component: DBG_RAM_WR, Actual Value: 0x0001, Expected Value: 0x0001
+[PASS] Test No: 6, Component: DBG_T_State, Actual Value: 0x0010, Expected Value: 0x0010
+[PASS] Test No: 6, Component: DBG_PC_Val, Actual Value: 0x1122, Expected Value: 0x1122
+[PASS] Test No: 6, Component: DBG_AR_Val, Actual Value: 0x0014, Expected Value: 0x0014
+[PASS] Test No: 6, Component: DBG_OutDSel, Actual Value: 0x0000, Expected Value: 0x0000
+[PASS] Test No: 6, Component: DBG_OutCSel, Actual Value: 0x0000, Expected Value: 0x0000
+[PASS] Test No: 6, Component: DBG_MuxCSel, Actual Value: 0x0000, Expected Value: 0x0000
+[PASS] Test No: 6, Component: DBG_RAM_CS, Actual Value: 0x0000, Expected Value: 0x0000
+[PASS] Test No: 6, Component: DBG_RAM_WR, Actual Value: 0x0001, Expected Value: 0x0001
+[PASS] Test No: 6, Component: DBG_T_State, Actual Value: 0x0020, Expected Value: 0x0020
+[PASS] Test No: 6, Component: DBG_PC_Val, Actual Value: 0x1122, Expected Value: 0x1122
+[PASS] Test No: 6, Component: DBG_AR_Val, Actual Value: 0x0015, Expected Value: 0x0015
+[PASS] Test No: 6, Component: DBG_OutDSel, Actual Value: 0x0000, Expected Value: 0x0000
+[PASS] Test No: 6, Component: DBG_OutCSel, Actual Value: 0x0000, Expected Value: 0x0000
+[PASS] Test No: 6, Component: DBG_MuxCSel, Actual Value: 0x0001, Expected Value: 0x0001
+[PASS] Test No: 6, Component: DBG_RAM_CS, Actual Value: 0x0001, Expected Value: 0x0001
+[PASS] Test No: 6, Component: DBG_RAM_WR, Actual Value: 0x0001, Expected Value: 0x0001
+[PASS] Test No: 6, Component: DBG_T_State, Actual Value: 0x0040, Expected Value: 0x0040
+[PASS] Test No: 6, Component: DBG_PC_Val, Actual Value: 0x1122, Expected Value: 0x1122
+[PASS] Test No: 6, Component: DBG_AR_Val, Actual Value: 0x0015, Expected Value: 0x0015
+[PASS] Test No: 6, Component: DBG_OutDSel, Actual Value: 0x0000, Expected Value: 0x0000
+[PASS] Test No: 6, Component: DBG_OutCSel, Actual Value: 0x0000, Expected Value: 0x0000
+[PASS] Test No: 6, Component: DBG_MuxCSel, Actual Value: 0x0000, Expected Value: 0x0000
+[PASS] Test No: 6, Component: DBG_RAM_CS, Actual Value: 0x0001, Expected Value: 0x0001
+[PASS] Test No: 6, Component: DBG_RAM_WR, Actual Value: 0x0000, Expected Value: 0x0000
+[PASS] Test No: 6, Component: AR, Actual Value: 0x0015, Expected Value: 0x0015
+[FAIL] Test No: 6, Component: MEM[AR,14], Actual Value: 0x00ff, Expected Value: 0x0022
+[FAIL] Test No: 6, Component: MEM[AR,15], Actual Value: 0x0023, Expected Value: 0x0011
+[FAIL] Test No: 7, Component: AR, Actual Value: 0x0000, Expected Value: 0x0021
+[FAIL] Test No: 7, Component: R4, Actual Value: 0x0000, Expected Value: 0x1405
+[FAIL] Test No: 8, Component: AR, Actual Value: 0x0000, Expected Value: 0x00a9
+[FAIL] Test No: 8, Component: MEM[AR,A8], Actual Value: 0x0000, Expected Value: 0x0089
+[FAIL] Test No: 8, Component: MEM[AR,A9], Actual Value: 0x0000, Expected Value: 0x0067
+[FAIL] Test No: 9, Component: AR, Actual Value: 0x0000, Expected Value: 0x0017
+[FAIL] Test No: 9, Component: R2, Actual Value: 0x0000, Expected Value: 0x0703
+[FAIL] Test No: 10, Component: AR, Actual Value: 0x00c0, Expected Value: 0x00c2
+[FAIL] Test No: 10, Component: MEM[AR,C1], Actual Value: 0x0000, Expected Value: 0x0011
+[PASS] Test No: 10, Component: MEM[AR,C2], Actual Value: 0x0000, Expected Value: 0x0000
+CPUSystemSimulation Simulation Finished
+------------------------------------
+
+
+
+------------------------------------
+CPUSystemSimulationFactorial Simulation Started
+[FAIL] Test No: 70, Component: IROut, Actual Value: 0x00ca, Expected Value: 0x00d8
+[PASS] Test No: 70, Component: PC, Actual Value: 0x00d8, Expected Value: 0x00d8
+[PASS] Test No: 70, Component: SP, Actual Value: 0x00ff, Expected Value: 0x00ff
+[FAIL] Test No: 70, Component: AR, Actual Value: 0x0001, Expected Value: 0x0055
+[FAIL] Test No: 70, Component: MEM[ADDRESS], Actual Value: 0x0000, Expected Value: 0x0018
+[PASS] Test No: 70, Component: MEM[ADDRESS], Actual Value: 0x0000, Expected Value: 0x0000
+[PASS] Test No: 70, Component: R1, Actual Value: 0x0001, Expected Value: 0x0001
+[PASS] Test No: 70, Component: R2, Actual Value: 0x0018, Expected Value: 0x0018
+[PASS] Test No: 70, Component: R3, Actual Value: 0x0006, Expected Value: 0x0006
+[PASS] Test No: 70, Component: R4, Actual Value: 0x0000, Expected Value: 0x0000
+[PASS] Test No: 70, Component: MEM[SP], Actual Value: 0x00c6, Expected Value: 0x00c6
+[PASS] Test No: 70, Component: MEM[SP], Actual Value: 0x0000, Expected Value: 0x0000
+[PASS] Test No: 70, Component: MEM[SP], Actual Value: 0x00ca, Expected Value: 0x00ca
+[PASS] Test No: 70, Component: MEM[SP], Actual Value: 0x0000, Expected Value: 0x0000
+[PASS] Test No: 70, Component: MEM[SP], Actual Value: 0x00c6, Expected Value: 0x00c6
+[PASS] Test No: 70, Component: MEM[SP], Actual Value: 0x0000, Expected Value: 0x0000
+[PASS] Test No: 70, Component: MEM[SP], Actual Value: 0x00ca, Expected Value: 0x00ca
+[PASS] Test No: 70, Component: MEM[SP], Actual Value: 0x0000, Expected Value: 0x0000
+[PASS] Test No: 70, Component: MEM[SP], Actual Value: 0x00c6, Expected Value: 0x00c6
+[PASS] Test No: 70, Component: MEM[SP], Actual Value: 0x0000, Expected Value: 0x0000
+[PASS] Test No: 70, Component: MEM[SP], Actual Value: 0x00ca, Expected Value: 0x00ca
+[PASS] Test No: 70, Component: MEM[SP], Actual Value: 0x0000, Expected Value: 0x0000
+[PASS] Test No: 70, Component: MEM[SP], Actual Value: 0x00b4, Expected Value: 0x00b4
+[PASS] Test No: 70, Component: MEM[SP], Actual Value: 0x0000, Expected Value: 0x0000
+CPUSystemSimulationFactorial Simulation Finished
+------------------------------------
+
+
+
+------------------------------------
+CPUSystemSimulation Simulation Started
+[PASS] Test No: 1, Component: MEM[SP, FE], Actual Value: 0x0012, Expected Value: 0x0012
+[PASS] Test No: 1, Component: MEM[SP, FF], Actual Value: 0x0023, Expected Value: 0x0023
+[PASS] Test No: 1, Component: SP, Actual Value: 0x00fd, Expected Value: 0x00fd
+[PASS] Test No: 2, Component: MEM[SP,FE], Actual Value: 0x0012, Expected Value: 0x0012
+[PASS] Test No: 2, Component: MEM[SP,FF], Actual Value: 0x0023, Expected Value: 0x0023
+[PASS] Test No: 2, Component: R1, Actual Value: 0x2312, Expected Value: 0x2312
+[PASS] Test No: 2, Component: SP, Actual Value: 0x00ff, Expected Value: 0x00ff
+[PASS] Test No: 3, Component: PC, Actual Value: 0x0036, Expected Value: 0x0036
+[PASS] Test No: 3, Component: MEM[SP,FC], Actual Value: 0x0070, Expected Value: 0x0070
+[PASS] Test No: 3, Component: MEM[SP,FD], Actual Value: 0x0000, Expected Value: 0x0000
+[PASS] Test No: 3, Component: SP, Actual Value: 0x00fb, Expected Value: 0x00fb
+[PASS] Test No: 4, Component: PC, Actual Value: 0x0070, Expected Value: 0x0070
+[PASS] Test No: 4, Component: SP, Actual Value: 0x00fd, Expected Value: 0x00fd
+[PASS] Test No: 5, Component: AR, Actual Value: 0x0007, Expected Value: 0x0007
+[PASS] Test No: 5, Component: R2, Actual Value: 0x0703, Expected Value: 0x0703
+[PASS] Test No: 6, Component: DBG_T_State, Actual Value: 0x0004, Expected Value: 0x0004
+[PASS] Test No: 6, Component: DBG_PC_Val, Actual Value: 0x1122, Expected Value: 0x1122
+[PASS] Test No: 6, Component: DBG_AR_Val, Actual Value: 0x0014, Expected Value: 0x0014
+[PASS] Test No: 6, Component: DBG_OutDSel, Actual Value: 0x0000, Expected Value: 0x0000
+[PASS] Test No: 6, Component: DBG_OutCSel, Actual Value: 0x0000, Expected Value: 0x0000
+[PASS] Test No: 6, Component: DBG_MuxCSel, Actual Value: 0x0000, Expected Value: 0x0000
+[PASS] Test No: 6, Component: DBG_RAM_CS, Actual Value: 0x0001, Expected Value: 0x0001
+[PASS] Test No: 6, Component: DBG_RAM_WR, Actual Value: 0x0000, Expected Value: 0x0000
+[PASS] Test No: 6, Component: DBG_T_State, Actual Value: 0x0008, Expected Value: 0x0008
+[PASS] Test No: 6, Component: DBG_PC_Val, Actual Value: 0x1122, Expected Value: 0x1122
+[PASS] Test No: 6, Component: DBG_AR_Val, Actual Value: 0x0014, Expected Value: 0x0014
+[PASS] Test No: 6, Component: DBG_OutDSel, Actual Value: 0x0000, Expected Value: 0x0000
+[PASS] Test No: 6, Component: DBG_OutCSel, Actual Value: 0x0000, Expected Value: 0x0000
+[PASS] Test No: 6, Component: DBG_MuxCSel, Actual Value: 0x0000, Expected Value: 0x0000
+[PASS] Test No: 6, Component: DBG_RAM_CS, Actual Value: 0x0001, Expected Value: 0x0001
+[PASS] Test No: 6, Component: DBG_RAM_WR, Actual Value: 0x0001, Expected Value: 0x0001
+[PASS] Test No: 6, Component: DBG_T_State, Actual Value: 0x0010, Expected Value: 0x0010
+[PASS] Test No: 6, Component: DBG_PC_Val, Actual Value: 0x1122, Expected Value: 0x1122
+[PASS] Test No: 6, Component: DBG_AR_Val, Actual Value: 0x0014, Expected Value: 0x0014
+[PASS] Test No: 6, Component: DBG_OutDSel, Actual Value: 0x0000, Expected Value: 0x0000
+[PASS] Test No: 6, Component: DBG_OutCSel, Actual Value: 0x0000, Expected Value: 0x0000
+[PASS] Test No: 6, Component: DBG_MuxCSel, Actual Value: 0x0000, Expected Value: 0x0000
+[PASS] Test No: 6, Component: DBG_RAM_CS, Actual Value: 0x0000, Expected Value: 0x0000
+[PASS] Test No: 6, Component: DBG_RAM_WR, Actual Value: 0x0001, Expected Value: 0x0001
+[PASS] Test No: 6, Component: DBG_T_State, Actual Value: 0x0020, Expected Value: 0x0020
+[PASS] Test No: 6, Component: DBG_PC_Val, Actual Value: 0x1122, Expected Value: 0x1122
+[PASS] Test No: 6, Component: DBG_AR_Val, Actual Value: 0x0015, Expected Value: 0x0015
+[PASS] Test No: 6, Component: DBG_OutDSel, Actual Value: 0x0000, Expected Value: 0x0000
+[PASS] Test No: 6, Component: DBG_OutCSel, Actual Value: 0x0000, Expected Value: 0x0000
+[PASS] Test No: 6, Component: DBG_MuxCSel, Actual Value: 0x0001, Expected Value: 0x0001
+[PASS] Test No: 6, Component: DBG_RAM_CS, Actual Value: 0x0001, Expected Value: 0x0001
+[PASS] Test No: 6, Component: DBG_RAM_WR, Actual Value: 0x0001, Expected Value: 0x0001
+[PASS] Test No: 6, Component: DBG_T_State, Actual Value: 0x0040, Expected Value: 0x0040
+[PASS] Test No: 6, Component: DBG_PC_Val, Actual Value: 0x1122, Expected Value: 0x1122
+[PASS] Test No: 6, Component: DBG_AR_Val, Actual Value: 0x0015, Expected Value: 0x0015
+[PASS] Test No: 6, Component: DBG_OutDSel, Actual Value: 0x0000, Expected Value: 0x0000
+[PASS] Test No: 6, Component: DBG_OutCSel, Actual Value: 0x0000, Expected Value: 0x0000
+[PASS] Test No: 6, Component: DBG_MuxCSel, Actual Value: 0x0000, Expected Value: 0x0000
+[PASS] Test No: 6, Component: DBG_RAM_CS, Actual Value: 0x0001, Expected Value: 0x0001
+[PASS] Test No: 6, Component: DBG_RAM_WR, Actual Value: 0x0000, Expected Value: 0x0000
+[PASS] Test No: 6, Component: AR, Actual Value: 0x0015, Expected Value: 0x0015
+[FAIL] Test No: 6, Component: MEM[AR,14], Actual Value: 0x00ff, Expected Value: 0x0022
+[FAIL] Test No: 6, Component: MEM[AR,15], Actual Value: 0x0023, Expected Value: 0x0011
+[FAIL] Test No: 7, Component: AR, Actual Value: 0x0000, Expected Value: 0x0021
+[FAIL] Test No: 7, Component: R4, Actual Value: 0x0000, Expected Value: 0x1405
+[FAIL] Test No: 8, Component: AR, Actual Value: 0x0000, Expected Value: 0x00a9
+[FAIL] Test No: 8, Component: MEM[AR,A8], Actual Value: 0x0000, Expected Value: 0x0089
+[FAIL] Test No: 8, Component: MEM[AR,A9], Actual Value: 0x0000, Expected Value: 0x0067
+[FAIL] Test No: 9, Component: AR, Actual Value: 0x0000, Expected Value: 0x0017
+[FAIL] Test No: 9, Component: R2, Actual Value: 0x0000, Expected Value: 0x0703
+[FAIL] Test No: 10, Component: AR, Actual Value: 0x00c0, Expected Value: 0x00c2
+[FAIL] Test No: 10, Component: MEM[AR,C1], Actual Value: 0x0000, Expected Value: 0x0011
+[PASS] Test No: 10, Component: MEM[AR,C2], Actual Value: 0x0000, Expected Value: 0x0000
+CPUSystemSimulation Simulation Finished
+------------------------------------
+
+
+
+------------------------------------
+CPUSystemSimulationFactorial Simulation Started
+[FAIL] Test No: 70, Component: IROut, Actual Value: 0x00ca, Expected Value: 0x00d8
+[PASS] Test No: 70, Component: PC, Actual Value: 0x00d8, Expected Value: 0x00d8
+[PASS] Test No: 70, Component: SP, Actual Value: 0x00ff, Expected Value: 0x00ff
+[FAIL] Test No: 70, Component: AR, Actual Value: 0x0001, Expected Value: 0x0055
+[FAIL] Test No: 70, Component: MEM[ADDRESS], Actual Value: 0x0000, Expected Value: 0x0018
+[PASS] Test No: 70, Component: MEM[ADDRESS], Actual Value: 0x0000, Expected Value: 0x0000
+[PASS] Test No: 70, Component: R1, Actual Value: 0x0001, Expected Value: 0x0001
+[PASS] Test No: 70, Component: R2, Actual Value: 0x0018, Expected Value: 0x0018
+[PASS] Test No: 70, Component: R3, Actual Value: 0x0006, Expected Value: 0x0006
+[PASS] Test No: 70, Component: R4, Actual Value: 0x0000, Expected Value: 0x0000
+[PASS] Test No: 70, Component: MEM[SP], Actual Value: 0x00c6, Expected Value: 0x00c6
+[PASS] Test No: 70, Component: MEM[SP], Actual Value: 0x0000, Expected Value: 0x0000
+[PASS] Test No: 70, Component: MEM[SP], Actual Value: 0x00ca, Expected Value: 0x00ca
+[PASS] Test No: 70, Component: MEM[SP], Actual Value: 0x0000, Expected Value: 0x0000
+[PASS] Test No: 70, Component: MEM[SP], Actual Value: 0x00c6, Expected Value: 0x00c6
+[PASS] Test No: 70, Component: MEM[SP], Actual Value: 0x0000, Expected Value: 0x0000
+[PASS] Test No: 70, Component: MEM[SP], Actual Value: 0x00ca, Expected Value: 0x00ca
+[PASS] Test No: 70, Component: MEM[SP], Actual Value: 0x0000, Expected Value: 0x0000
+[PASS] Test No: 70, Component: MEM[SP], Actual Value: 0x00c6, Expected Value: 0x00c6
+[PASS] Test No: 70, Component: MEM[SP], Actual Value: 0x0000, Expected Value: 0x0000
+[PASS] Test No: 70, Component: MEM[SP], Actual Value: 0x00ca, Expected Value: 0x00ca
+[PASS] Test No: 70, Component: MEM[SP], Actual Value: 0x0000, Expected Value: 0x0000
+[PASS] Test No: 70, Component: MEM[SP], Actual Value: 0x00b4, Expected Value: 0x00b4
+[PASS] Test No: 70, Component: MEM[SP], Actual Value: 0x0000, Expected Value: 0x0000
+CPUSystemSimulationFactorial Simulation Finished
+------------------------------------
+
+
+
