@@ -1,7 +1,7 @@
-Running: xsim.dir/cpusyssimfact/xsimk.exe -runall -simmode gui -wdb cpusyssimfact.wdb -simrunnum 0 -socket 54496
+Running: xsim.dir/cpusyssimfact/xsimk.exe -runall -simmode gui -wdb cpusyssimfact.wdb -simrunnum 0 -socket 55584
 Design successfully loaded
 Design Loading Memory Usage: 9452 KB (Peak: 9452 KB)
 Design Loading CPU Usage: 15 ms
 Simulation completed
-Simulation Memory Usage: 10368 KB (Peak: 10368 KB)
-Simulation CPU Usage: 15 ms
+Simulation Memory Usage: 10424 KB (Peak: 10424 KB)
+Simulation CPU Usage: 30 ms

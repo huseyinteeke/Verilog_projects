@@ -49,7 +49,7 @@ reg [2:0] Decoded_ARF_DST;
 reg [3:0] Decoded_IMM_DST;
 reg [4:0] Decoded_SREG1;
 reg [4:0] Decoded_ARF_SREG1;
-
+reg [3:0] Decoded_RFOutSel;
 // DECODER BLOK 
 always @(*) begin
     case(DestReg)
@@ -66,12 +66,23 @@ always @(*) begin
         3'b011:         Decoded_ARF_DST = 3'b101; // SP
         default:        Decoded_ARF_DST = 3'b111; 
     endcase
+
+
+    
     
     case(RegSel)
         2'b00: Decoded_IMM_DST = 4'b0111; // R1
         2'b01: Decoded_IMM_DST = 4'b1011; // R2
         2'b10: Decoded_IMM_DST = 4'b1101; // R3
         2'b11: Decoded_IMM_DST = 4'b1110; // R4
+    endcase
+
+
+    case(RegSel)
+        2'b00: Decoded_RFOutSel = 3'b000; // R1
+        2'b01: Decoded_RFOutSel = 3'b001; // R2
+        2'b10: Decoded_RFOutSel = 3'b010; // R3
+        2'b11: Decoded_RFOutSel = 4'b011; // R4
     endcase
 
     case(SrcReg1)
@@ -83,10 +94,10 @@ always @(*) begin
     endcase
     
     case(SrcReg1)
-        3'b000, 3'b001: Decoded_ARF_SREG1 = 3'b011; // PC
-        3'b010:         Decoded_ARF_SREG1 = 3'b110; // AR
-        3'b011:         Decoded_ARF_SREG1 = 3'b101; // SP
-        default:        Decoded_ARF_SREG1 = 3'b111; 
+        3'b000, 3'b001: Decoded_ARF_SREG1 = 2'b00; // PC
+        3'b010:         Decoded_ARF_SREG1 = 2'b10; // AR
+        3'b011:         Decoded_ARF_SREG1 = 2'b11; // SP
+        default:        Decoded_ARF_SREG1 = 2'b11; 
     endcase
 
 
@@ -275,6 +286,40 @@ always @(*) begin
                 end
 
 
+                else if(Opcode == 6'd30)
+                begin
+                
+                MuxBSel = 2'b11;
+                ARF_FunSel = 2'b01;
+                ARF_RegSel = 2'b10;
+                T_Reset    = 1'b0;
+                
+                end
+
+
+                else if(Opcode == 6'd31) //STA
+                begin
+                
+                MuxBSel = 2'b11;
+                ARF_FunSel = 2'b01;
+                ARF_RegSel = 3'b110;
+                T_Reset    = 1'b0;
+                
+
+                end
+
+
+                else if(Opcode == 6'd32 || Opcode == 6'd33) //LDT , STT upload IMUout to S1
+                begin
+                
+                MuxASel   = 2'b11;
+                RF_RegSel = 4'b1111;//S1 , R disabled
+                RF_ScrSel = 4'b0111;
+                RF_FunSel = 2'b01; 
+
+
+                end
+
 
                 else begin 
                     if (SrcReg1[2] == 1'b0) begin
@@ -386,7 +431,44 @@ always @(*) begin
                     end
                 end
 
+                else if(Opcode == 6'd30) //LDA
+                begin
+                
+                DMU_CS      = 1'b1;
+                DMU_WR      = 1'b0; //read
+                DMU_FunSel  = 1'b0; //LSB
+                ARF_OutDSel = 1'b0;
+                
 
+                end
+
+                else if(Opcode == 6'd31) //STA
+                begin
+                
+                ARF_OutDSel = 1'b0;
+                
+                RF_OutASel  = Decoded_RFOutSel;
+                ALU_FunSel  = 4'b0000;
+                MuxCSel     = 1'b0; //LSB
+
+                DMU_CS      = 1'b1;
+                DMU_WR      = 1'b1; //read
+                
+
+                end
+
+
+                else if(Opcode == 6'd32 || 6'd33 ) //LDT , STT upload AR S2
+                begin
+                
+                MuxASel     = 2'b01;
+                ARF_OutCSel = 2'b10;//AR 
+                RF_RegSel = 4'b1111;//S2 , R disabled
+                RF_ScrSel = 4'b1011;
+                RF_FunSel = 2'b01; 
+
+
+                end
 
 
                 else begin
@@ -488,6 +570,36 @@ always @(*) begin
                 end
 
 
+                else if(Opcode == 6'd30)
+                begin
+                ARF_RegSel = 3'b110;
+                ARF_FunSel = 2'b10;
+                
+                end
+
+                else if(Opcode == 6'd31) //STA
+                begin
+                ARF_RegSel = 3'b110;
+                ARF_FunSel = 2'b10;
+    
+                end
+
+
+
+                else if(Opcode == 6'd32 || Opcode == 6'd33) //LDT , STT S1 + S2 (AR + OFFSET)
+                begin
+                
+                RF_OutASel = 3'b100; //S1
+                RF_OutBSel = 3'b101; //S2
+                ALU_FunSel = 4'b0100; //A + B
+                MuxBSel    = 2'b00;//Reupload AR <- ALUOut
+                ARF_RegSel = 3'b110;
+                ARF_FunSel = 2'b01;
+
+
+                end
+
+
                 else begin 
                     ALU_WF = 1'b1;
                     if (DestReg[2] == 1'b1) begin
@@ -554,7 +666,7 @@ always @(*) begin
                 else if(Opcode == 6'd27) //RET
                 begin
                 
-                    ARF_OutCSel = 1'b1;
+                    ARF_OutDSel = 1'b1;
                     DMU_CS      = 1'b1;
                     DMU_WR      = 1'b0; //READ
                     DMU_FunSel  = 1'b1; //MSB
@@ -584,11 +696,67 @@ always @(*) begin
 
                 else if(Opcode == 6'd29) //STR
                 begin
+                    RF_OutASel  = 3'b100;
+                    ALU_FunSel  = 4'b0000;
                     ARF_OutDSel = 1'b0; //AR
                     DMU_CS      = 1'b1;
                     DMU_WR      = 1'b1; //W
                     MuxCSel     = 1'b1; //MSB
                 end
+
+
+                else if(Opcode == 6'd30)
+                begin
+                    ARF_OutDSel = 1'b0;
+                    DMU_CS      = 1'b1;
+                    DMU_WR      = 1'b0; //read
+                    DMU_FunSel  = 1'b1; //MSB
+                
+                end
+
+                else if(Opcode == 6'd31)
+                begin
+
+                    RF_OutASel  = Decoded_RFOutSel;
+                    ALU_FunSel  = 4'b0000;
+                    ARF_OutDSel = 1'b0;
+                    DMU_CS      = 1'b1;
+                    DMU_WR      = 1'b1; //write
+                    MuxCSel  = 1'b1; //MSB
+                
+                end
+
+
+                else if(Opcode == 6'd32) //LDT Read DMU AR
+                begin
+                
+                ARF_OutDSel = 1'b0; //AR to address
+                DMU_CS      = 1'b1;
+                DMU_WR      = 1'b0; //Read
+                DMU_FunSel  = 1'b0; //LSB
+
+
+                end
+
+
+                else if(Opcode == 6'd33) //STT Write DMU AR
+                begin
+
+
+                RF_OutASel = Decoded_RFOutSel;
+                ALU_FunSel = 4'b0000; //Directly forward data
+                MuxCSel    = 1'b0; //LSB
+                
+                ARF_OutDSel = 1'b0; //AR to address
+                DMU_CS      = 1'b1;
+                DMU_WR      = 1'b1; //write
+
+
+
+                end
+
+
+
             end
 
             12'h0040: begin
@@ -627,6 +795,33 @@ always @(*) begin
                     T_Reset = 1'b1;
                 end
 
+
+                
+                else if(Opcode == 6'd30)
+                begin
+                    MuxASel = 2'b10;
+                    RF_RegSel = Decoded_IMM_DST;
+                    RF_FunSel = 2'b01;
+                end
+
+                else if(Opcode == 6'd31) //STA
+                begin
+                    T_Reset = 1'b1;
+                end
+
+
+                else if(Opcode == 6'd32 ||Opcode == 6'd33 ) //LDT STT AR ++
+                begin
+                
+                DMU_CS      = 1'b0;
+                ARF_FunSel  = 2'b10;
+                ARF_RegSel  = 3'b110;
+
+                end
+
+
+
+
             end
 
             12'h0080: begin
@@ -647,8 +842,27 @@ always @(*) begin
                     T_Reset = 1'b1;
                 end
 
+            else if(Opcode == 6'd30)
+            begin
+                T_Reset = 1'b1;
+            end
+
+
+            else if(Opcode == 6'd32) //LDT Read AR + 1
+            begin
+            
+            ARF_OutDSel = 1'b0; //AR to address
+            DMU_CS      = 1'b1;
+            DMU_WR      = 1'b0; //Read
+            DMU_FunSel  = 1'b1; //MSB
+
 
             end
+
+
+            end
+
+            
 
             12'h0100: begin
                 if(Opcode == 6'd26) begin // CALL (T=256)
@@ -660,6 +874,45 @@ always @(*) begin
                     
                     T_Reset     = 1'b1;    // VE FİNAL!
                 end
+
+
+                else if(Opcode == 6'd32) //LDT Read AR + 1
+                begin
+                    DMU_CS  = 1'b0;
+                
+                    MuxASel = 2'b10;
+                    RF_RegSel = Decoded_IMM_DST;
+                    RF_FunSel = 2'b01;
+
+
+                end
+
+
+                else if(Opcode == 6'd33) //STT Write DMU AR
+                begin
+
+
+                RF_OutASel = Decoded_RFOutSel;
+                ALU_FunSel = 4'b0000; //Directly forward data
+                MuxCSel    = 1'b1;  //MSB
+                
+                ARF_OutDSel = 1'b0; //AR to address
+                DMU_CS      = 1'b1;
+                DMU_WR      = 1'b1; //write
+
+
+
+                end
+            end 
+
+            12'h0200: begin
+                if(Opcode == 6'd32 ||Opcode == 6'd33) //LDT Finish
+                begin
+                
+                    T_Reset = 1'b1;
+
+                end
+            
             end
         endcase
     end
@@ -682,8 +935,9 @@ always @(posedge Clock) begin
             end
             12'h0010: T <= 12'h0020; 
             12'h0020: T <= 12'h0040;
+            12'h0040: T <= 12'h0080;
             12'h0080: T <= 12'h0100; 
-            12'h0100: T <= 12'h0001;
+            12'h0100: T <= 12'h0200;
             default:  T <= 12'h0001;
         endcase
     end
