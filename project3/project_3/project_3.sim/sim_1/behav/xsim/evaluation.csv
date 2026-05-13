@@ -1,0 +1,211 @@
+CPUSystemSimulationFactorial;70;IROut;0;0x00ca;0x00d8
+CPUSystemSimulationFactorial;70;PC;1;0x00d8;0x00d8
+CPUSystemSimulationFactorial;70;SP;1;0x00ff;0x00ff
+CPUSystemSimulationFactorial;70;AR;1;0x0055;0x0055
+CPUSystemSimulationFactorial;70;MEM[ADDRESS];0;0x0001;0x0018
+CPUSystemSimulationFactorial;70;MEM[ADDRESS];1;0x0000;0x0000
+CPUSystemSimulationFactorial;70;R1;1;0x0001;0x0001
+CPUSystemSimulationFactorial;70;R2;0;0x0001;0x0018
+CPUSystemSimulationFactorial;70;R3;0;0x0000;0x0006
+CPUSystemSimulationFactorial;70;R4;1;0x0000;0x0000
+CPUSystemSimulationFactorial;70;MEM[SP];1;0x00c6;0x00c6
+CPUSystemSimulationFactorial;70;MEM[SP];1;0x0000;0x0000
+CPUSystemSimulationFactorial;70;MEM[SP];1;0x00ca;0x00ca
+CPUSystemSimulationFactorial;70;MEM[SP];1;0x0000;0x0000
+CPUSystemSimulationFactorial;70;MEM[SP];1;0x00c6;0x00c6
+CPUSystemSimulationFactorial;70;MEM[SP];1;0x0000;0x0000
+CPUSystemSimulationFactorial;70;MEM[SP];1;0x00ca;0x00ca
+CPUSystemSimulationFactorial;70;MEM[SP];1;0x0000;0x0000
+CPUSystemSimulationFactorial;70;MEM[SP];1;0x00c6;0x00c6
+CPUSystemSimulationFactorial;70;MEM[SP];1;0x0000;0x0000
+CPUSystemSimulationFactorial;70;MEM[SP];1;0x00ca;0x00ca
+CPUSystemSimulationFactorial;70;MEM[SP];1;0x0000;0x0000
+CPUSystemSimulationFactorial;70;MEM[SP];1;0x00b4;0x00b4
+CPUSystemSimulationFactorial;70;MEM[SP];1;0x0000;0x0000
+CPUSystemSimulationFactorial;70;IROut;0;0x00ca;0x00d8
+CPUSystemSimulationFactorial;70;PC;1;0x00d8;0x00d8
+CPUSystemSimulationFactorial;70;SP;1;0x00ff;0x00ff
+CPUSystemSimulationFactorial;70;AR;1;0x0055;0x0055
+CPUSystemSimulationFactorial;70;MEM[ADDRESS];1;0x0018;0x0018
+CPUSystemSimulationFactorial;70;MEM[ADDRESS];1;0x0000;0x0000
+CPUSystemSimulationFactorial;70;R1;1;0x0001;0x0001
+CPUSystemSimulationFactorial;70;R2;1;0x0018;0x0018
+CPUSystemSimulationFactorial;70;R3;1;0x0006;0x0006
+CPUSystemSimulationFactorial;70;R4;1;0x0000;0x0000
+CPUSystemSimulationFactorial;70;MEM[SP];1;0x00c6;0x00c6
+CPUSystemSimulationFactorial;70;MEM[SP];1;0x0000;0x0000
+CPUSystemSimulationFactorial;70;MEM[SP];1;0x00ca;0x00ca
+CPUSystemSimulationFactorial;70;MEM[SP];1;0x0000;0x0000
+CPUSystemSimulationFactorial;70;MEM[SP];1;0x00c6;0x00c6
+CPUSystemSimulationFactorial;70;MEM[SP];1;0x0000;0x0000
+CPUSystemSimulationFactorial;70;MEM[SP];1;0x00ca;0x00ca
+CPUSystemSimulationFactorial;70;MEM[SP];1;0x0000;0x0000
+CPUSystemSimulationFactorial;70;MEM[SP];1;0x00c6;0x00c6
+CPUSystemSimulationFactorial;70;MEM[SP];1;0x0000;0x0000
+CPUSystemSimulationFactorial;70;MEM[SP];1;0x00ca;0x00ca
+CPUSystemSimulationFactorial;70;MEM[SP];1;0x0000;0x0000
+CPUSystemSimulationFactorial;70;MEM[SP];1;0x00b4;0x00b4
+CPUSystemSimulationFactorial;70;MEM[SP];1;0x0000;0x0000
+CPUSystemSimulationFactorial;70;IROut;0;0x00ca;0x00d8
+CPUSystemSimulationFactorial;70;PC;1;0x00d8;0x00d8
+CPUSystemSimulationFactorial;70;SP;1;0x00ff;0x00ff
+CPUSystemSimulationFactorial;70;AR;1;0x0055;0x0055
+CPUSystemSimulationFactorial;70;MEM[ADDRESS];1;0x0018;0x0018
+CPUSystemSimulationFactorial;70;MEM[ADDRESS];1;0x0000;0x0000
+CPUSystemSimulationFactorial;70;R1;1;0x0001;0x0001
+CPUSystemSimulationFactorial;70;R2;1;0x0018;0x0018
+CPUSystemSimulationFactorial;70;R3;1;0x0006;0x0006
+CPUSystemSimulationFactorial;70;R4;1;0x0000;0x0000
+CPUSystemSimulationFactorial;70;MEM[SP];1;0x00c6;0x00c6
+CPUSystemSimulationFactorial;70;MEM[SP];1;0x0000;0x0000
+CPUSystemSimulationFactorial;70;MEM[SP];1;0x00ca;0x00ca
+CPUSystemSimulationFactorial;70;MEM[SP];1;0x0000;0x0000
+CPUSystemSimulationFactorial;70;MEM[SP];1;0x00c6;0x00c6
+CPUSystemSimulationFactorial;70;MEM[SP];1;0x0000;0x0000
+CPUSystemSimulationFactorial;70;MEM[SP];1;0x00ca;0x00ca
+CPUSystemSimulationFactorial;70;MEM[SP];1;0x0000;0x0000
+CPUSystemSimulationFactorial;70;MEM[SP];1;0x00c6;0x00c6
+CPUSystemSimulationFactorial;70;MEM[SP];1;0x0000;0x0000
+CPUSystemSimulationFactorial;70;MEM[SP];1;0x00ca;0x00ca
+CPUSystemSimulationFactorial;70;MEM[SP];1;0x0000;0x0000
+CPUSystemSimulationFactorial;70;MEM[SP];1;0x00b4;0x00b4
+CPUSystemSimulationFactorial;70;MEM[SP];1;0x0000;0x0000
+CPUSystemSimulationFactorial;70;IROut;0;0x00ca;0x00d8
+CPUSystemSimulationFactorial;70;PC;1;0x00d8;0x00d8
+CPUSystemSimulationFactorial;70;SP;1;0x00ff;0x00ff
+CPUSystemSimulationFactorial;70;AR;1;0x0055;0x0055
+CPUSystemSimulationFactorial;70;MEM[ADDRESS];1;0x0018;0x0018
+CPUSystemSimulationFactorial;70;MEM[ADDRESS];1;0x0000;0x0000
+CPUSystemSimulationFactorial;70;R1;1;0x0001;0x0001
+CPUSystemSimulationFactorial;70;R2;1;0x0018;0x0018
+CPUSystemSimulationFactorial;70;R3;1;0x0006;0x0006
+CPUSystemSimulationFactorial;70;R4;1;0x0000;0x0000
+CPUSystemSimulationFactorial;70;MEM[SP];1;0x00c6;0x00c6
+CPUSystemSimulationFactorial;70;MEM[SP];1;0x0000;0x0000
+CPUSystemSimulationFactorial;70;MEM[SP];1;0x00ca;0x00ca
+CPUSystemSimulationFactorial;70;MEM[SP];1;0x0000;0x0000
+CPUSystemSimulationFactorial;70;MEM[SP];1;0x00c6;0x00c6
+CPUSystemSimulationFactorial;70;MEM[SP];1;0x0000;0x0000
+CPUSystemSimulationFactorial;70;MEM[SP];1;0x00ca;0x00ca
+CPUSystemSimulationFactorial;70;MEM[SP];1;0x0000;0x0000
+CPUSystemSimulationFactorial;70;MEM[SP];1;0x00c6;0x00c6
+CPUSystemSimulationFactorial;70;MEM[SP];1;0x0000;0x0000
+CPUSystemSimulationFactorial;70;MEM[SP];1;0x00ca;0x00ca
+CPUSystemSimulationFactorial;70;MEM[SP];1;0x0000;0x0000
+CPUSystemSimulationFactorial;70;MEM[SP];1;0x00b4;0x00b4
+CPUSystemSimulationFactorial;70;MEM[SP];1;0x0000;0x0000
+CPUSystemSimulationFactorial;70;IROut;1;0x00d8;0x00d8
+CPUSystemSimulationFactorial;70;PC;1;0x00d8;0x00d8
+CPUSystemSimulationFactorial;70;SP;1;0x00ff;0x00ff
+CPUSystemSimulationFactorial;70;AR;1;0x0055;0x0055
+CPUSystemSimulationFactorial;70;MEM[ADDRESS];1;0x0018;0x0018
+CPUSystemSimulationFactorial;70;MEM[ADDRESS];1;0x0000;0x0000
+CPUSystemSimulationFactorial;70;R1;1;0x0001;0x0001
+CPUSystemSimulationFactorial;70;R2;1;0x0018;0x0018
+CPUSystemSimulationFactorial;70;R3;1;0x0006;0x0006
+CPUSystemSimulationFactorial;70;R4;1;0x0000;0x0000
+CPUSystemSimulationFactorial;70;MEM[SP];1;0x00c6;0x00c6
+CPUSystemSimulationFactorial;70;MEM[SP];1;0x0000;0x0000
+CPUSystemSimulationFactorial;70;MEM[SP];1;0x00ca;0x00ca
+CPUSystemSimulationFactorial;70;MEM[SP];1;0x0000;0x0000
+CPUSystemSimulationFactorial;70;MEM[SP];1;0x00c6;0x00c6
+CPUSystemSimulationFactorial;70;MEM[SP];1;0x0000;0x0000
+CPUSystemSimulationFactorial;70;MEM[SP];1;0x00ca;0x00ca
+CPUSystemSimulationFactorial;70;MEM[SP];1;0x0000;0x0000
+CPUSystemSimulationFactorial;70;MEM[SP];1;0x00c6;0x00c6
+CPUSystemSimulationFactorial;70;MEM[SP];1;0x0000;0x0000
+CPUSystemSimulationFactorial;70;MEM[SP];1;0x00ca;0x00ca
+CPUSystemSimulationFactorial;70;MEM[SP];1;0x0000;0x0000
+CPUSystemSimulationFactorial;70;MEM[SP];1;0x00b4;0x00b4
+CPUSystemSimulationFactorial;70;MEM[SP];1;0x0000;0x0000
+CPUSystemSimulationArrayMax;1;MEM[0xB6] (Max Value);0;0x0000;0x002a
+CPUSystemSimulationArrayMax;1;R2 (Max Value in Register);0;0x0f05;0x002a
+CPUSystemSimulationArrayMax;1;R1 (Loop Counter=0);1;0x0000;0x0000
+CPUSystemSimulationArrayMax;1;MEM[0xBC] (Max Value LSB);0;0x0007;0x002a
+CPUSystemSimulationArrayMax;1;MEM[0xBD] (Max Value MSB);1;0x0000;0x0000
+CPUSystemSimulationArrayMax;1;R2 (Max Value in Register);1;0x002a;0x002a
+CPUSystemSimulationArrayMax;1;R1 (Loop Counter=0);0;0x0006;0x0000
+CPUSystemSimulationArrayMax;1;MEM[0xBC] (Max Value LSB);1;0x002a;0x002a
+CPUSystemSimulationArrayMax;1;MEM[0xBD] (Max Value MSB);1;0x0000;0x0000
+CPUSystemSimulationArrayMax;1;R2 (Max Value in Register);1;0x002a;0x002a
+CPUSystemSimulationArrayMax;1;R1 (Loop Counter=0);1;0x0000;0x0000
+CPUSystemSimulationArrayMax;1;MEM[0xBC] (Max Value LSB);1;0x002a;0x002a
+CPUSystemSimulationArrayMax;1;MEM[0xBD] (Max Value MSB);1;0x0000;0x0000
+CPUSystemSimulationArrayMax;1;R2 (Max Value in Register);1;0x002a;0x002a
+CPUSystemSimulationArrayMax;1;R1 (Loop Counter=0);1;0x0000;0x0000
+CPUSystemSimulationArrayMax;1;MEM[0xBC] (Max Value LSB);0;0x0000;0x002a
+CPUSystemSimulationArrayMax;1;MEM[0xBD] (Max Value MSB);1;0x0000;0x0000
+CPUSystemSimulationArrayMax;1;R2 (Max Value in Register);0;0x0000;0x002a
+CPUSystemSimulationArrayMax;1;R1 (Loop Counter=0);1;0x0000;0x0000
+CPUSystemSimulationArrayMax;1;MEM[0xBC] (Max Value LSB);0;0x0010;0x00ff
+CPUSystemSimulationArrayMax;1;MEM[0xBD] (Max Value MSB);0;0x0000;0x00a0
+CPUSystemSimulationArrayMax;1;R2 (Max Value in Register);0;0x0010;0x002a
+CPUSystemSimulationArrayMax;1;R1 (Loop Counter=0);1;0x0000;0x0000
+CPUSystemSimulationArrayMax;1;MEM[0xBC] (Max Value LSB);0;0x0010;0x00ff
+CPUSystemSimulationArrayMax;1;MEM[0xBD] (Max Value MSB);0;0x0000;0x00a0
+CPUSystemSimulationArrayMax;1;R2 (Max Value in Register);0;0x0010;0x002a
+CPUSystemSimulationArrayMax;1;R1 (Loop Counter=0);1;0x0000;0x0000
+CPUSystemSimulationArrayMax;1;MEM[0xBC] (Max Value LSB);0;0x007f;0x002a
+CPUSystemSimulationArrayMax;1;MEM[0xBD] (Max Value MSB);1;0x0000;0x0000
+CPUSystemSimulationArrayMax;1;R2 (Max Value in Register);0;0x007f;0x002a
+CPUSystemSimulationArrayMax;1;R1 (Loop Counter=0);1;0x0000;0x0000
+CPUSystemSimulationArrayMax;1;MEM[0xBC] (Max Value LSB);0;0x0000;0x002a
+CPUSystemSimulationArrayMax;1;MEM[0xBD] (Max Value MSB);1;0x0000;0x0000
+CPUSystemSimulationArrayMax;1;R2 (Max Value in Register);0;0x0000;0x002a
+CPUSystemSimulationArrayMax;1;R1 (Loop Counter=0);1;0x0000;0x0000
+CPUSystemSimulationArrayMax;1;MEM[0xBC] (Max Value LSB);0;0x00fe;0x002a
+CPUSystemSimulationArrayMax;1;MEM[0xBD] (Max Value MSB);1;0x0000;0x0000
+CPUSystemSimulationArrayMax;1;R2 (Max Value in Register);0;0x7ffe;0x002a
+CPUSystemSimulationArrayMax;1;R1 (Loop Counter=0);1;0x0000;0x0000
+CPUSystemSimulationArrayMax;1;MEM[0xBC] (Max Value LSB);0;0x00fe;0x002a
+CPUSystemSimulationArrayMax;1;MEM[0xBD] (Max Value MSB);1;0x0000;0x0000
+CPUSystemSimulationArrayMax;1;R2 (Max Value in Register);0;0x7ffe;0x002a
+CPUSystemSimulationArrayMax;1;R1 (Loop Counter=0);1;0x0000;0x0000
+CPUSystemSimulationArrayMax;1;MEM[0xBC] (Max Value LSB);0;0x00fe;0x002a
+CPUSystemSimulationArrayMax;1;MEM[0xBD] (Max Value MSB);1;0x0000;0x0000
+CPUSystemSimulationArrayMax;1;R2 (Max Value in Register);0;0x7ffe;0x002a
+CPUSystemSimulationArrayMax;1;R1 (Loop Counter=0);1;0x0000;0x0000
+CPUSystemSimulationArrayMax;1;MEM[0xBC] (Max Value LSB);0;0x00fe;0x002a
+CPUSystemSimulationArrayMax;1;MEM[0xBD] (Max Value MSB);1;0x0000;0x0000
+CPUSystemSimulationArrayMax;1;R2 (Max Value in Register);0;0x7ffe;0x002a
+CPUSystemSimulationArrayMax;1;R1 (Loop Counter=0);1;0x0000;0x0000
+CPUSystemSimulationArrayMax;1;MEM[0xBC] (Max Value LSB);0;0x00ff;0x002a
+CPUSystemSimulationArrayMax;1;MEM[0xBD] (Max Value MSB);1;0x0000;0x0000
+CPUSystemSimulationArrayMax;1;R2 (Max Value in Register);0;0x7fff;0x002a
+CPUSystemSimulationArrayMax;1;R1 (Loop Counter=0);1;0x0000;0x0000
+CPUSystemSimulationArrayMax;1;MEM[0xBC] (Max Value LSB);0;0x003a;0x002a
+CPUSystemSimulationArrayMax;1;MEM[0xBD] (Max Value MSB);1;0x0000;0x0000
+CPUSystemSimulationArrayMax;1;R2 (Max Value in Register);0;0x053a;0x002a
+CPUSystemSimulationArrayMax;1;R1 (Loop Counter=0);1;0x0000;0x0000
+CPUSystemSimulationArrayMax;1;MEM[0xBC] (Max Value LSB);0;0x003a;0x002a
+CPUSystemSimulationArrayMax;1;MEM[0xBD] (Max Value MSB);0;0x0005;0x0000
+CPUSystemSimulationArrayMax;1;R2 (Max Value in Register);0;0x053a;0x002a
+CPUSystemSimulationArrayMax;1;R1 (Loop Counter=0);1;0x0000;0x0000
+CPUSystemSimulationArrayMax;1;MEM[0xBC] (Max Value LSB);0;0x00aa;0x002a
+CPUSystemSimulationArrayMax;1;MEM[0xBD] (Max Value MSB);0;0x0055;0x0000
+CPUSystemSimulationArrayMax;1;R2 (Max Value in Register);0;0x55aa;0x002a
+CPUSystemSimulationArrayMax;1;R1 (Loop Counter=0);1;0x0000;0x0000
+CPUSystemSimulationFactorial;70;IROut;0;0x1d20;0x00d8
+CPUSystemSimulationFactorial;70;PC;0;0x00a2;0x00d8
+CPUSystemSimulationFactorial;70;SP;1;0x00ff;0x00ff
+CPUSystemSimulationFactorial;70;AR;0;0x00ba;0x0055
+CPUSystemSimulationFactorial;70;MEM[ADDRESS];0;0x0000;0x0018
+CPUSystemSimulationFactorial;70;MEM[ADDRESS];1;0x0000;0x0000
+CPUSystemSimulationFactorial;70;R1;0;0x0002;0x0001
+CPUSystemSimulationFactorial;70;R2;0;0x0000;0x0018
+CPUSystemSimulationFactorial;70;R3;0;0x0000;0x0006
+CPUSystemSimulationFactorial;70;R4;1;0x0000;0x0000
+CPUSystemSimulationFactorial;70;MEM[SP];0;0x0000;0x00c6
+CPUSystemSimulationFactorial;70;MEM[SP];1;0x0000;0x0000
+CPUSystemSimulationFactorial;70;MEM[SP];0;0x0000;0x00ca
+CPUSystemSimulationFactorial;70;MEM[SP];1;0x0000;0x0000
+CPUSystemSimulationFactorial;70;MEM[SP];0;0x0000;0x00c6
+CPUSystemSimulationFactorial;70;MEM[SP];1;0x0000;0x0000
+CPUSystemSimulationFactorial;70;MEM[SP];0;0x0000;0x00ca
+CPUSystemSimulationFactorial;70;MEM[SP];1;0x0000;0x0000
+CPUSystemSimulationFactorial;70;MEM[SP];0;0x0000;0x00c6
+CPUSystemSimulationFactorial;70;MEM[SP];1;0x0000;0x0000
+CPUSystemSimulationFactorial;70;MEM[SP];0;0x0000;0x00ca
+CPUSystemSimulationFactorial;70;MEM[SP];1;0x0000;0x0000
+CPUSystemSimulationFactorial;70;MEM[SP];0;0x0000;0x00b4
+CPUSystemSimulationFactorial;70;MEM[SP];1;0x0000;0x0000

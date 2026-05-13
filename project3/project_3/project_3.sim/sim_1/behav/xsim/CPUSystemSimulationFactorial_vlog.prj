@@ -1,0 +1,22 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../project_3.srcs/sources_1/imports/submission_files/AddressRegisterFile.v" \
+"../../../../project_3.srcs/sources_1/imports/submission_files/ArithmeticLogicUnit.v" \
+"../../../../project_3.srcs/sources_1/imports/submission_files/ArithmeticLogicUnitSystem.v" \
+"../../../../project_3.srcs/sources_1/imports/submission_files/CPUSystem.v" \
+"../../../../project_3.srcs/sources_1/imports/submission_files/DataMemory.v" \
+"../../../../project_3.srcs/sources_1/imports/submission_files/DataMemoryUnit.v" \
+"../../../../project_3.srcs/sources_1/imports/submission_files/DataRegister.v" \
+"../../../../project_3.srcs/sources_1/imports/submission_files/Helper.v" \
+"../../../../project_3.srcs/sources_1/imports/submission_files/InstructionMemory.v" \
+"../../../../project_3.srcs/sources_1/imports/submission_files/InstructionMemoryUnit.v" \
+"../../../../project_3.srcs/sources_1/imports/submission_files/InstructionRegister.v" \
+"../../../../project_3.srcs/sources_1/imports/submission_files/Register16bit.v" \
+"../../../../project_3.srcs/sources_1/imports/submission_files/RegisterFile.v" \
+"../../../../project_3.srcs/sim_1/imports/submission_files/CPUSystemSimulationFactorial.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

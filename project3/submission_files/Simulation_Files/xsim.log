@@ -2,8 +2,8 @@
 # xsim v2017.4 (64-bit)
 # SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
 # IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
-# Start of session at: Mon May 11 17:38:23 2026
-# Process ID: 10704
+# Start of session at: Thu May 14 02:43:01 2026
+# Process ID: 10964
 # Current directory: C:/CompOrg/project3/submission_files/Simulation_Files
 # Command line: xsim.exe -mode tcl -source {xsim.dir/cpusyssimfact/xsim_script.tcl}
 # Log file: C:/CompOrg/project3/submission_files/Simulation_Files/xsim.log
@@ -16,15 +16,15 @@ Time resolution is 1 ps
 run -all
 ------------------------------------
 CPUSystemSimulationFactorial Simulation Started
-[FAIL] Test No: 70, Component: IROut, Actual Value: 0x00ca, Expected Value: 0x00d8
+[PASS] Test No: 70, Component: IROut, Actual Value: 0x00d8, Expected Value: 0x00d8
 [PASS] Test No: 70, Component: PC, Actual Value: 0x00d8, Expected Value: 0x00d8
 [PASS] Test No: 70, Component: SP, Actual Value: 0x00ff, Expected Value: 0x00ff
 [PASS] Test No: 70, Component: AR, Actual Value: 0x0055, Expected Value: 0x0055
-[FAIL] Test No: 70, Component: MEM[ADDRESS], Actual Value: 0x0001, Expected Value: 0x0018
+[PASS] Test No: 70, Component: MEM[ADDRESS], Actual Value: 0x0018, Expected Value: 0x0018
 [PASS] Test No: 70, Component: MEM[ADDRESS], Actual Value: 0x0000, Expected Value: 0x0000
 [PASS] Test No: 70, Component: R1, Actual Value: 0x0001, Expected Value: 0x0001
-[FAIL] Test No: 70, Component: R2, Actual Value: 0x0001, Expected Value: 0x0018
-[FAIL] Test No: 70, Component: R3, Actual Value: 0x0000, Expected Value: 0x0006
+[PASS] Test No: 70, Component: R2, Actual Value: 0x0018, Expected Value: 0x0018
+[PASS] Test No: 70, Component: R3, Actual Value: 0x0006, Expected Value: 0x0006
 [PASS] Test No: 70, Component: R4, Actual Value: 0x0000, Expected Value: 0x0000
 [PASS] Test No: 70, Component: MEM[SP], Actual Value: 0x00c6, Expected Value: 0x00c6
 [PASS] Test No: 70, Component: MEM[SP], Actual Value: 0x0000, Expected Value: 0x0000
@@ -41,8 +41,8 @@ CPUSystemSimulationFactorial Simulation Started
 [PASS] Test No: 70, Component: MEM[SP], Actual Value: 0x00b4, Expected Value: 0x00b4
 [PASS] Test No: 70, Component: MEM[SP], Actual Value: 0x0000, Expected Value: 0x0000
 CPUSystemSimulationFactorial Simulation Finished
-4 Test Failed
-20 Test Passed
+0 Test Failed
+24 Test Passed
 ------------------------------------
 exit
-INFO: [Common 17-206] Exiting xsim at Mon May 11 17:38:25 2026...
+INFO: [Common 17-206] Exiting xsim at Thu May 14 02:43:04 2026...

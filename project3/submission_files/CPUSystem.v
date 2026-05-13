@@ -66,9 +66,6 @@ always @(*) begin
         3'b011:         Decoded_ARF_DST = 3'b101; // SP
         default:        Decoded_ARF_DST = 3'b111; 
     endcase
-
-
-    
     
     case(RegSel)
         2'b00: Decoded_IMM_DST = 4'b0111; // R1
@@ -113,6 +110,9 @@ ArithmeticLogicUnitSystem ALUSys(
     .IMU_CS(IMU_CS), .DMU_CS(DMU_CS), .DMU_WR(DMU_WR), .DMU_FunSel(DMU_FunSel),
     .IROut(IROut), .Z(Z), .C(C), .N(N), .O(O)
 );
+
+
+
 
 always @(*) begin
 
@@ -181,18 +181,18 @@ always @(*) begin
             12'h0004: begin 
                 IMU_CS = 1'b0;
                 if (Opcode <= 6'd6) begin 
-                    IMU_CS = 1'b1; 
+                    //IMU_CS = 1'b1; 
                     if (Opcode == 6'd0 || (Opcode == 6'd1 && Z == 0) || (Opcode == 6'd2 && Z == 1) ||
-                       (Opcode == 6'd3 && N != 0) || (Opcode == 6'd4 && N == 0 && Z == 0) ||
-                       (Opcode == 6'd5 && (N != 0 || Z == 1)) || (Opcode == 6'd6 && N == 0)) begin
+                       (Opcode == 6'd3 && N != O) || (Opcode == 6'd4 && N == O && Z == 0) ||
+                       (Opcode == 6'd5 && (N != O || Z == 1)) || (Opcode == 6'd6 && N == O)) begin
                         ARF_FunSel = 2'b01; ARF_RegSel = 3'b011;
                     end
                     T_Reset = 1'b1;
                 end
                 else if (Opcode == 6'd23) begin 
-                    IMU_CS = 1'b1; 
+                    //IMU_CS = 1'b1; 
                     RF_FunSel = 2'b01; RF_RegSel = Decoded_IMM_DST;
-                    T_Reset = 1'b1;
+                    //T_Reset = 1'b1;
                 end
                 else if (Opcode == 6'd7 || Opcode == 6'd8) begin 
                     if (SrcReg1[2] == 1'b0) begin 
@@ -220,29 +220,28 @@ always @(*) begin
                 else if(Opcode == 6'd25) //PSH M[SP] <- PC 
                 begin
                     
-                    ARF_OutDSel = 1'b1;         // Adres = SP (0xFF)
-                    ARF_RegSel  = 3'b111;       // SP Kilitli (Yazma yok)
-                    ARF_FunSel  = 2'b00;        // İşlemsiz
+                    ARF_OutDSel = 1'b1;         
+                    ARF_RegSel  = 3'b111;       
+                    ARF_FunSel  = 2'b00;        
                     
-                    RF_OutASel  = 3'b000;       // R1 seçili (veya Decoded_RSEL)
-                    ALU_FunSel  = 4'b0000;      // İşlemsiz geç
-                    MuxCSel     = 1'b1;         // MSB (23) seçili
+                    RF_OutASel  = Decoded_RFOutSel;       
+                    ALU_FunSel  = 4'b0000;      
+                    MuxCSel     = 1'b1;         
                     
                     DMU_CS      = 1'b1; 
-                    DMU_WR      = 1'b1;         // 0xFF'e 23 YAZ!
+                    DMU_WR      = 1'b1;         
                     T_Reset     = 1'b0;
                 
                 end
 
 
-                else if(Opcode == 6'd26) begin // CALL - T=4 (PC'yi Hazırla)
-                    // PC'yi 006F'den 0070'e artır. Henüz başka bir yere yazmıyoruz.
+                else if(Opcode == 6'd26) begin // CALL
                     ARF_OutCSel = 2'b00;       // OutC = PC
                     MuxASel     = 2'b01;       // MUXA = OutC
                     
-                    RF_ScrSel   = 4'b0111;     // Sadece S1 Seçili [cite: 54]
+                    RF_ScrSel   = 4'b0111;     //S1
                     RF_FunSel   = 2'b01;       // LOAD
-                    RF_RegSel   = 4'b1111;     // Diğer yazmaçları kilitliyoruz [cite: 52]
+                    RF_RegSel   = 4'b1111;     
                     T_Reset     = 1'b0;
                 end
 
@@ -270,13 +269,12 @@ always @(*) begin
                     DMU_CS      = 1'b0;
                     if(Decoded_SREG1 != 4'b1111) //RF To mem
                     begin
-                        RF_OutASel = Decoded_SREG1;
+                        RF_OutASel = Decoded_RFOutSel;
                         ALU_FunSel = 4'b0000;
                         MuxCSel    = 1'b0; //LSB
                     end
                     else //ARF to mem
                     begin
-
                         ARF_OutCSel = Decoded_ARF_SREG1;
                         MuxASel     = 2'b01;
                         RF_RegSel   = 4'b1111;
@@ -346,6 +344,10 @@ always @(*) begin
                     end
                 end
 
+                else if (Opcode == 6'd23) begin 
+                    T_Reset = 1'b1;
+                end
+                
                 else if (Opcode == 6'd24) //POP Read LSB
                 begin
                 ARF_OutDSel = 1'b1;
@@ -362,33 +364,32 @@ always @(*) begin
 
                 else if(Opcode == 6'd25) //PSH M[SP] <- PC 
                 begin
-                    ARF_OutDSel = 1'b1;         // Adres hala SP
-                    ARF_RegSel  = 3'b101;       // SP Seçili
-                    ARF_FunSel  = 2'b11;        // SP'yi 1 azalt (0xFF -> 0xFE)
+                    ARF_OutDSel = 1'b1;         
+                    ARF_RegSel  = 3'b101;       
+                    ARF_FunSel  = 2'b11;        
                     
-                    RF_OutASel  = 3'b000;       // Veri yolunu DÜŞÜRME, tut!
+                    RF_OutASel  = 3'b000;       
                     ALU_FunSel  = 4'b0000;
                     MuxCSel     = 1'b1;
                     
-                    DMU_CS      = 1'b0;         // RAM KAPALI!
-                    DMU_WR      = 1'b0;         // RAM KAPALI!
+                    DMU_CS      = 1'b0;        
+                    DMU_WR      = 1'b0;         
                     T_Reset     = 1'b0;
                 end
 
 
                 else if(Opcode == 6'd26) begin // CALL - T=8
-    // S1'den MSB'yi (00) oku, FD adresine yaz ve SP'yi düşür
-                    RF_OutASel  = 3'b100;      // OutA = S1 [cite: 46]
+                    RF_OutASel  = 3'b100;      // OutA = S1
                     ALU_FunSel  = 4'b0000;     // Pass A
                     MuxCSel     = 1'b1;        // MSB (00)
                     
-                    ARF_OutDSel = 1'b1;        // Adres = SP (FD)
+                    ARF_OutDSel = 1'b1;        // SP (FD)
                     DMU_CS      = 1'b1;
-                    DMU_WR      = 1'b1;        // YAZ
+                    DMU_WR      = 1'b1;        
                     
-                    ARF_RegSel  = 3'b101;      // Sadece SP Seçili [cite: 84]
+                    ARF_RegSel  = 3'b101;
                     ARF_FunSel  = 2'b11;       // SP <- SP - 1 (FD -> FC)
-                    RF_FunSel   = 2'b00;       // RF'yi kilitle
+                    RF_FunSel   = 2'b00;       
                     T_Reset     = 1'b0;
                 end
 
@@ -418,7 +419,7 @@ always @(*) begin
                     DMU_WR      = 1'b1; //W
                     if(Decoded_SREG1 != 4'b1111) //RF To mem
                     begin
-                        RF_OutASel = Decoded_SREG1;
+                        RF_OutASel = {1'b0, SrcReg1[1:0]};
                         ALU_FunSel = 4'b0000;
                         MuxCSel    = 1'b0; //LSB
                     end
@@ -489,13 +490,13 @@ always @(*) begin
 
                 else if(Opcode == 6'd24) //POP SP + 1 to MSb
                 begin
-                    ARF_OutDSel = 1'b1;         // Adres = SP (Artık FF)
-                    ARF_RegSel  = 3'b111;       // SP KİLİTLİ (Yazmayı kapat)
+                    ARF_OutDSel = 1'b1;         
+                    ARF_RegSel  = 3'b111;      
                     ARF_FunSel  = 2'b00;
                     
-                    DMU_CS      = 1'b1;         // RAM AÇIK
-                    DMU_WR      = 1'b0;         // SADECE OKU!
-                    DMU_FunSel  = 1'b1;         // MSB (Üst 8 bit DR'ye dolsun)
+                    DMU_CS      = 1'b1;         
+                    DMU_WR      = 1'b0;         
+                    DMU_FunSel  = 1'b1;       
                     
                     RF_FunSel   = 2'b00;
                     T_Reset     = 1'b0;
@@ -503,32 +504,31 @@ always @(*) begin
 
                 else if(Opcode == 6'd25) 
                 begin
-                    ARF_OutDSel = 1'b1;         // Adres = SP (Artık 0xFE)
-                    ARF_RegSel  = 3'b111;       // SP Kilitli (Yazma yok)
+                    ARF_OutDSel = 1'b1;         
+                    ARF_RegSel  = 3'b111;      
                     ARF_FunSel  = 2'b00;
                     
-                    RF_OutASel  = 3'b000;       // R1 seçili
+                    RF_OutASel  = 3'b000;      
                     ALU_FunSel  = 4'b0000;
-                    MuxCSel     = 1'b0;         // LSB (12) seçili
+                    MuxCSel     = 1'b0;         
                     
                     DMU_CS      = 1'b1; 
-                    DMU_WR      = 1'b1;         // 0xFE'ye 12 YAZ!
+                    DMU_WR      = 1'b1;         
                     T_Reset     = 1'b0;
 
                 end
 
 
                 else if(Opcode == 6'd26) begin // CALL - T=16
-                    // S1'den LSB'yi (70) oku, FC adresine yaz ve SP'yi düşür
                     RF_OutASel  = 3'b100;      // OutA = S1
                     ALU_FunSel  = 4'b0000;     // Pass A
-                    MuxCSel     = 1'b0;        // LSB (70)
+                    MuxCSel     = 1'b0;       
                     
-                    ARF_OutDSel = 1'b1;        // Adres = SP (FC)
+                    ARF_OutDSel = 1'b1;        
                     DMU_CS      = 1'b1;
                     DMU_WR      = 1'b1;        // YAZ
                     
-                    ARF_RegSel  = 3'b101;      // SP Seçili
+                    ARF_RegSel  = 3'b101;      // SP
                     ARF_FunSel  = 2'b11;       // SP <- SP - 1 (FC -> FB)
                     RF_FunSel   = 2'b00;
                     T_Reset     = 1'b0;
@@ -552,7 +552,6 @@ always @(*) begin
 
                 else if(Opcode == 6'd28) //LDR fill DMUOut
                 begin
-
                     ARF_OutDSel = 1'b0;
                     DMU_CS      = 1'b1;
                     DMU_WR      = 1'b0; //READ
@@ -601,7 +600,7 @@ always @(*) begin
 
 
                 else begin 
-                    ALU_WF = 1'b1;
+                    if (Opcode != 6'd22) ALU_WF = 1'b1;
                     if (DestReg[2] == 1'b1) begin
                         MuxASel=2'b00; RF_FunSel = 2'b01; RF_RegSel = Decoded_DSTREG;
                     end else begin
@@ -617,33 +616,32 @@ always @(*) begin
                 begin
                 
                 ARF_OutDSel = 1'b1;         
-                ARF_RegSel  = 3'b111;       // SP KİLİTLİ
+                ARF_RegSel  = 3'b111;       
                 ARF_FunSel  = 2'b00;
                 
-                DMU_CS      = 1'b0;         // RAM İŞİ BİTTİ, KAPAT
+                DMU_CS      = 1'b0;         
                 DMU_WR      = 1'b0;
                 
-                // EĞER SENİN TASARIMDA "Decoded_IMM_DST" KULLANILIYORSA ONU YAZ, 
-                // AMA NORMALDE BURASI Decoded_RSEL OLMALIDIR.
-                RF_RegSel   = Decoded_IMM_DST; // R2'yi Hedefle
-                RF_FunSel   = 2'b01;        // RF LOAD (Yaz)
-                MuxASel     = 2'b10;        // DMUOut'u (Data Register çıkışını) seç
+       
+                RF_RegSel   = Decoded_IMM_DST; 
+                RF_FunSel   = 2'b01;        
+                MuxASel     = 2'b10;        
                 
                 T_Reset     = 1'b1;
                 end
 
                 else if(Opcode == 6'd25) begin
                     
-                    ARF_OutDSel = 1'b1;         // Adres = SP
-                    ARF_RegSel  = 3'b101;       // SP Seçili
-                    ARF_FunSel  = 2'b11;        // SP'yi 1 azalt (0xFE -> 0xFD)
+                    ARF_OutDSel = 1'b1;        
+                    ARF_RegSel  = 3'b101;       
+                    ARF_FunSel  = 2'b11;       
                     
-                    RF_OutASel  = 3'b000;       // Veri yolunu tut
+                    RF_OutASel  = 3'b000;      
                     ALU_FunSel  = 4'b0000;
                     MuxCSel     = 1'b0;
                     
-                    DMU_CS      = 1'b0;         // RAM KAPALI
-                    DMU_WR      = 1'b0;         // RAM KAPALI
+                    DMU_CS      = 1'b0;        
+                    DMU_WR      = 1'b0;         
                     T_Reset     = 1'b1;
 
                 end
@@ -651,15 +649,14 @@ always @(*) begin
 
 
                 else if(Opcode == 6'd26) begin // CALL - T=32
-                    // FİNAL: IMUOut'taki 0036'yı PC'ye yükle ve bitir
-                    MuxBSel     = 2'b11;       // MUXB = IMUOut [cite: 289]
+                    MuxBSel     = 2'b11;       
                     
-                    ARF_RegSel  = 3'b011;      // PC Seçili
-                    ARF_FunSel  = 2'b01;       // PC <- MUX B (LOAD)
+                    ARF_RegSel  = 3'b011;      
+                    ARF_FunSel  = 2'b01;       
                     
                     DMU_CS      = 1'b0;
                     DMU_WR      = 1'b0;
-                    T_Reset     = 1'b1;        // SIFIRLA VE BAŞA DÖN!
+                    T_Reset     = 1'b1;        
                 end
 
 
@@ -696,12 +693,20 @@ always @(*) begin
 
                 else if(Opcode == 6'd29) //STR
                 begin
-                    RF_OutASel  = 3'b100;
+                    if(Decoded_SREG1 != 4'b1111) 
+                    begin
+                        RF_OutASel = Decoded_RFOutSel
+                    end
+                    else // ARF'den RAM'e yazılıyorsa
+                    begin
+                        RF_OutASel = 3'b100; //S1
+                    end
+                    
                     ALU_FunSel  = 4'b0000;
                     ARF_OutDSel = 1'b0; //AR
                     DMU_CS      = 1'b1;
                     DMU_WR      = 1'b1; //W
-                    MuxCSel     = 1'b1; //MSB
+                    MuxCSel     = 1'b1;
                 end
 
 
@@ -761,16 +766,14 @@ always @(*) begin
 
             12'h0040: begin
                
-                if(Opcode == 6'd26) begin // CALL - T=64 (FİNAL ATLAYIŞ)
-                    // IMUOut'taki hedef adresi (0036) MUX B üzerinden PC'ye yükle
-                    MuxBSel     = 2'b11;    // MUX B çıkışı = IMUOut (Tablo 9)
-                    
-                    ARF_RegSel  = 3'b011;   // PC Seçili
+                if(Opcode == 6'd26) begin // CALL
+                    MuxBSel     = 2'b11;
+                    ARF_RegSel  = 3'b011;   // PC
                     ARF_FunSel  = 2'b01;    // PC <- MUX B (LOAD)
                     
-                    DMU_CS      = 1'b0;     // RAM Kapalı
+                    DMU_CS      = 1'b0;    
                     DMU_WR      = 1'b0;
-                    T_Reset     = 1'b1;     // İŞLEM BİTTİ, SIFIRLA!
+                    T_Reset     = 1'b1;     
                 end
 
                 else if(Opcode == 6'd27) //RET
@@ -825,10 +828,10 @@ always @(*) begin
             end
 
             12'h0080: begin
-            if(Opcode == 6'd26) begin // CALL (T=128)
+            if(Opcode == 6'd26) begin // CALL
                 ARF_OutDSel = 1'b1;
-                ARF_RegSel  = 3'b101;  // SP
-                ARF_FunSel  = 2'b11;   // SP'yi Azalt (DEC)
+                ARF_RegSel  = 3'b101; 
+                ARF_FunSel  = 2'b11;   
                 
                 DMU_CS      = 1'b0;
                 DMU_WR      = 1'b0;
@@ -866,13 +869,13 @@ always @(*) begin
 
             12'h0100: begin
                 if(Opcode == 6'd26) begin // CALL (T=256)
-                    MuxASel     = 2'b11;   // Hedef Adres (IMM / IROut[7:0] vs)
+                    MuxASel     = 2'b11;  
                     ALU_FunSel  = 4'b0000;
                     
-                    ARF_RegSel  = 3'b011;  // PC Seçili
-                    ARF_FunSel  = 2'b01;   // PC'ye ALU çıkışını Yükle (LOAD)
+                    ARF_RegSel  = 3'b011;  
+                    ARF_FunSel  = 2'b01;   
                     
-                    T_Reset     = 1'b1;    // VE FİNAL!
+                    T_Reset     = 1'b1;   
                 end
 
 
@@ -929,10 +932,7 @@ always @(posedge Clock) begin
                 if (Opcode <= 6'd6 || Opcode == 6'd23) T <= 12'h0001; 
                 else T <= 12'h0008; 
             end
-            12'h0008: begin
-                if ((Opcode >= 6'd9 && Opcode <= 6'd14) || Opcode == 6'd22) T <= 12'h0001; 
-                else T <= 12'h0010; 
-            end
+            12'h0008: T <= 12'h0010; 
             12'h0010: T <= 12'h0020; 
             12'h0020: T <= 12'h0040;
             12'h0040: T <= 12'h0080;

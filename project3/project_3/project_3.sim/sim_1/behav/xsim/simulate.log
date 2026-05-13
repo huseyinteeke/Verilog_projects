@@ -1,0 +1,34 @@
+Vivado Simulator 2017.4
+Time resolution is 1 ps
+------------------------------------
+CPUSystemSimulationArrayMax Simulation Started
+Stopped at time : 0 fs : File "C:/CompOrg/project3/project_3/project_3.srcs/sim_1/imports/submission_files/CPUSystemArrIndexing.v" Line 84
+[FAIL] Test No: 1, Component: MEM[0xBC] (Max Value LSB), Actual Value: 0x00aa, Expected Value: 0x002a
+[FAIL] Test No: 1, Component: MEM[0xBD] (Max Value MSB), Actual Value: 0x0055, Expected Value: 0x0000
+[FAIL] Test No: 1, Component: R2 (Max Value in Register), Actual Value: 0x55aa, Expected Value: 0x002a
+[PASS] Test No: 1, Component: R1 (Loop Counter=0), Actual Value: 0x0000, Expected Value: 0x0000
+CPUSystemSimulationArrayMax Simulation Finished
+3 Test Failed
+1 Test Passed
+------------------------------------
+0x0018
+[FAIL] Test No: 70, Component: R3, Actual Value: 0x0000, Expected Value: 0x0006
+[PASS] Test No: 70, Component: R4, Actual Value: 0x0000, Expected Value: 0x0000
+[FAIL] Test No: 70, Component: MEM[SP], Actual Value: 0x0000, Expected Value: 0x00c6
+[PASS] Test No: 70, Component: MEM[SP], Actual Value: 0x0000, Expected Value: 0x0000
+[FAIL] Test No: 70, Component: MEM[SP], Actual Value: 0x0000, Expected Value: 0x00ca
+[PASS] Test No: 70, Component: MEM[SP], Actual Value: 0x0000, Expected Value: 0x0000
+[FAIL] Test No: 70, Component: MEM[SP], Actual Value: 0x0000, Expected Value: 0x00c6
+[PASS] Test No: 70, Component: MEM[SP], Actual Value: 0x0000, Expected Value: 0x0000
+[FAIL] Test No: 70, Component: MEM[SP], Actual Value: 0x0000, Expected Value: 0x00ca
+[PASS] Test No: 70, Component: MEM[SP], Actual Value: 0x0000, Expected Value: 0x0000
+[FAIL] Test No: 70, Component: MEM[SP], Actual Value: 0x0000, Expected Value: 0x00c6
+[PASS] Test No: 70, Component: MEM[SP], Actual Value: 0x0000, Expected Value: 0x0000
+[FAIL] Test No: 70, Component: MEM[SP], Actual Value: 0x0000, Expected Value: 0x00ca
+[PASS] Test No: 70, Component: MEM[SP], Actual Value: 0x0000, Expected Value: 0x0000
+[FAIL] Test No: 70, Component: MEM[SP], Actual Value: 0x0000, Expected Value: 0x00b4
+[PASS] Test No: 70, Component: MEM[SP], Actual Value: 0x0000, Expected Value: 0x0000
+CPUSystemSimulationFactorial Simulation Finished
+14 Test Failed
+10 Test Passed
+------------------------------------
