@@ -1,6 +1,6 @@
 Vivado Simulator 2017.4
 Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2017.4/bin/unwrapped/win64.o/xelab.exe -top CPUSystemSimulationFactorial -snapshot cpusyssimfact -debug typical 
+Running: C:/Xilinx/Vivado/2017.4/bin/unwrapped/win64.o/xelab.exe -top CPUSystemSimulationArrayMax -snapshot cpusyssimarrmax -debug typical 
 Multi-threading is on. Using 18 slave threads.
 Starting static elaboration
 Completed static elaboration
@@ -24,5 +24,5 @@ Compiling module work.MUX2to1
 Compiling module work.ArithmeticLogicUnitSystem
 Compiling module work.CPUSystem
 Compiling module work.FileOperation
-Compiling module work.CPUSystemSimulationFactorial
-Built simulation snapshot cpusyssimfact
+Compiling module work.CPUSystemSimulationArrayMax
+Built simulation snapshot cpusyssimarrmax
