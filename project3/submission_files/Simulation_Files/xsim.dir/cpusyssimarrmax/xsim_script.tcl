@@ -1,0 +1,1 @@
+xsim {cpusyssimarrmax} -autoloadwcfg -runall

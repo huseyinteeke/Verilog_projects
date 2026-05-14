@@ -486,6 +486,7 @@ always @(*) begin
             12'h0010: begin 
                 if (Opcode == 6'd7 || Opcode == 6'd8) begin
                     if (DestReg[2]) begin RF_OutASel = {1'b0, DestReg[1:0]}; ALU_WF = 1'b1; end
+                    T_Reset = 1'b1;
                 end
 
                 else if(Opcode == 6'd24) //POP SP + 1 to MSb
@@ -695,9 +696,9 @@ always @(*) begin
                 begin
                     if(Decoded_SREG1 != 4'b1111) 
                     begin
-                        RF_OutASel = Decoded_RFOutSel
+                        RF_OutASel = Decoded_RFOutSel;
                     end
-                    else // ARF'den RAM'e yazılıyorsa
+                    else 
                     begin
                         RF_OutASel = 3'b100; //S1
                     end

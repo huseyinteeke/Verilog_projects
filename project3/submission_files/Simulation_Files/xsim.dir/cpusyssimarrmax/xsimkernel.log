@@ -1,0 +1,7 @@
+Running: xsim.dir/cpusyssimarrmax/xsimk.exe -runall -simmode gui -wdb cpusyssimarrmax.wdb -simrunnum 0 -socket 56718
+Design successfully loaded
+Design Loading Memory Usage: 10276 KB (Peak: 10276 KB)
+Design Loading CPU Usage: 0 ms
+Simulation completed
+Simulation Memory Usage: 11228 KB (Peak: 11228 KB)
+Simulation CPU Usage: 0 ms
